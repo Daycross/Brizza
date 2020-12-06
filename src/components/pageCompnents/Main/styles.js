@@ -6,6 +6,7 @@ export const Container = styled.div`
   min-height: 100vh;
   display: flex;
   justify-content: center;
+  scroll-snap-align: start;
 
   .main {
     display: flex;

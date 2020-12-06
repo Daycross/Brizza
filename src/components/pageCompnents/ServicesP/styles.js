@@ -8,6 +8,7 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  scroll-snap-align: start;
 
   .main {
     display: flex;

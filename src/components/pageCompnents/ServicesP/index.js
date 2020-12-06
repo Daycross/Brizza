@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import { Container } from './styles';
-import SocialHeader from '../../socialHeader';
-import BrizzaLogo from '../../BrizzaLogo';
 
-// import logoBrizza from '../../../assets/logosImages/brizza2x.png';
 import talks from '../../../assets/talks.jpg';
 
 function LandingPage() {
@@ -20,25 +17,17 @@ function LandingPage() {
   }, []);
 
   function handleScrollEvent() {
-    console.log(window.scrollY);
-
-    if (window.scrollY > 650.0) {
-      setOpacityLevel(opacityLevel + 0.1);
-    } else if (window.scrollY > 700) {
-      setOpacityLevel(opacityLevel + 0.4);
-    } else if (window.scrollY > 750) {
-      setOpacityLevel(opacityLevel + 0.8);
-    } else if (window.scrollY > 850) {
-      setOpacityLevel(opacityLevel + 0.8);
+    if (opacityLevel < 1) {
+      setOpacityLevel(opacityLevel + 0.011);
+    } else {
+      return;
     }
+    console.log(opacityLevel);
   }
 
   return (
     <Container>
-      <SocialHeader />
-      <BrizzaLogo />
       <div className="main">
-        {/* <img className="logo" src={logoBrizza} alt="Logo Brizza" /> */}
         <img
           style={{ opacity: opacityLevel }}
           className="talks"

@@ -1,14 +1,16 @@
 import React from 'react';
 
 import { Container } from './styles';
-import SocialHeader from '../../socialHeader';
-import BrizzaLogo from '../../BrizzaLogo';
 
 function LandingPage() {
+  function onFocusTest() {
+    console.log('Passou Aqui');
+  }
   return (
-    <Container>
-      <SocialHeader />
-      <BrizzaLogo />
+    <Container onMouseOver={onFocusTest}>
+      <p className="backgroundParagraph">
+        A matéria prima do design é a cultura
+      </p>
     </Container>
   );
 }

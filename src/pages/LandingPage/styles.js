@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  section {
-    background-color: blue;
-  }
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 `;
