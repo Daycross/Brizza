@@ -1,6 +1,8 @@
 import React from 'react';
 
+import { Link } from 'react-scroll';
 import { Container } from './styles';
+
 import instagram from '../../assets/socialImages/instagramx2.png';
 import linkedin from '../../assets/socialImages/linkedinx2.png';
 import be from '../../assets/socialImages/bex2.png';
@@ -15,21 +17,31 @@ function SocialHeader() {
       </div>
       <div className="progressBar">
         <div className="line-1" />
-        <div className="step-1">
-          <p>Serviços</p>
-        </div>
+        <Link
+          activeClass="active"
+          to="page-2"
+          spy="true"
+          smooth="true"
+          offset={-70}
+          duration={500}
+        >
+          <button type="button" className="step-1">
+            <p>Serviços</p>
+          </button>
+        </Link>
+
         <div className="line-2" />
-        <div className="step-2">
+        <button type="button" className="step-2">
           <p>Trabalhos</p>
-        </div>
+        </button>
         <div className="line-3" />
-        <div className="step-3">
+        <button type="button" className="step-3">
           <p>Marcas</p>
-        </div>
+        </button>
         <div className="line-4" />
-        <div className="step-4">
+        <button type="button" className="step-4">
           <p>Contato</p>
-        </div>
+        </button>
         <div className="line-5" />
       </div>
     </Container>

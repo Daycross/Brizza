@@ -28,11 +28,11 @@ function LandingPage() {
     <Container>
       <SocialHeader />
       <BrizzaLogo />
-      <Main />
-      <Services />
-      <Jobs />
-      <Brands />
-      <Contact />
+      <Main id="page-1" />
+      <Services id="page-2" />
+      <Jobs id="page-3" />
+      <Brands id="page-4" />
+      <Contact id="page-5" />
     </Container>
   );
 }

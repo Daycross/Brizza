@@ -43,17 +43,18 @@ export const Container = styled.div`
     .step-1 {
       position: relative;
       width: 10px;
-      height: 10px;
+      height: 16px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(58px);
+      background-color: transparent;
       cursor: pointer;
 
       p {
         position: absolute;
         color: white;
-        left: -55px;
-        top: -10px;
+        left: -57px;
+        top: -3px;
       }
     }
 
@@ -67,17 +68,18 @@ export const Container = styled.div`
     .step-2 {
       position: relative;
       width: 10px;
-      height: 10px;
+      height: 16px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(68px);
+      background-color: transparent;
       cursor: pointer;
 
       p {
         position: absolute;
         color: white;
-        left: -60px;
-        top: -10px;
+        left: -64px;
+        top: -3px;
       }
     }
 
@@ -91,17 +93,18 @@ export const Container = styled.div`
     .step-3 {
       position: relative;
       width: 10px;
-      height: 10px;
+      height: 16px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(58px);
+      background-color: transparent;
       cursor: pointer;
 
       p {
         position: absolute;
         color: white;
-        left: -46px;
-        top: -10px;
+        left: -50px;
+        top: -3px;
       }
     }
 
@@ -115,17 +118,18 @@ export const Container = styled.div`
     .step-4 {
       position: relative;
       width: 10px;
-      height: 10px;
+      height: 16px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(68px);
+      background-color: transparent;
       cursor: pointer;
 
       p {
         position: absolute;
         color: white;
-        left: -50px;
-        top: -10px;
+        left: -52px;
+        top: -3px;
       }
     }
 
