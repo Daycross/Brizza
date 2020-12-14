@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-const design = '70px';
+const design = '4.375rem';
+const designMobile = '2.5rem';
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -9,6 +10,7 @@ export const Container = styled.div`
   align-items: center;
   position: relative;
   scroll-snap-align: start;
+  z-index: 1;
 
   .main {
     display: flex;
@@ -16,17 +18,12 @@ export const Container = styled.div`
     flex-direction: row;
     align-items: center;
 
-    .logo {
-      width: 144px;
-      height: 49px;
-      margin-left: 49px;
-    }
-
-    .talks {
+    img {
       position: absolute;
       z-index: -1;
+      max-width: 60%;
       width: 745px;
-      height: 496px;
+      height: auto;
       top: 0;
       bottom: 0;
       left: 0;
@@ -39,20 +36,27 @@ export const Container = styled.div`
       display: flex;
       flex-direction: row;
       align-items: center;
-      p {
-        color: white;
-        margin-left: 33.4rem;
-        height: fit-content;
-        font-size: 14px;
-        &:last-child {
-          font-size: ${design};
-        }
-      }
+      justify-content: center;
+      max-width: 100%;
+
       .wrap {
         display: flex;
         width: fit-content;
         height: fit-content;
         flex-direction: column;
+
+        p {
+          color: white;
+          margin-left: 33.4rem;
+          @media (max-width: 1200px) {
+            margin-left: 20.4rem;
+          }
+          height: fit-content;
+          font-size: 0.9rem;
+          &:last-child {
+            font-size: ${design};
+          }
+        }
       }
 
       .scroll {
@@ -67,11 +71,53 @@ export const Container = styled.div`
           margin-left: 5px;
           font-size: ${design};
           height: fit-content;
+          line-height: 102px;
+          color: white;
           &:first-child {
-            margin-top: 120px;
+            margin-top: 110px;
           }
           &:last-child {
-            margin-bottom: 100px;
+            margin-bottom: 90px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .main {
+      img {
+        position: absolute;
+        z-index: -1;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+
+      .whatWeDo {
+        .wrap {
+          p {
+            margin-left: 1rem;
+            font-size: 1rem;
+            &:last-child {
+              font-size: ${designMobile};
+            }
+          }
+        }
+        .scroll {
+          p {
+            font-size: ${designMobile};
+            &:first-child {
+              margin-top: 138px;
+            }
+            &:last-child {
+              margin-bottom: 115px;
+            }
           }
         }
       }

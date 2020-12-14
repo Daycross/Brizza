@@ -18,7 +18,7 @@ function LandingPage() {
 
   function handleScrollEvent() {
     if (opacityLevel < 1) {
-      setOpacityLevel(opacityLevel + 0.011);
+      setOpacityLevel(opacityLevel + 0.015);
     } else {
       return;
     }

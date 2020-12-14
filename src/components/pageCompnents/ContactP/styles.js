@@ -7,7 +7,10 @@ export const Container = styled.div`
   align-items: center;
   position: relative;
   scroll-snap-align: start;
+
   .backgroundParagraph {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bolder;
     color: rgba(118, 118, 118, 0.2);
     font-size: 200px;
     position: absolute;
@@ -16,26 +19,34 @@ export const Container = styled.div`
     overflow: hidden;
     z-index: -1;
   }
+
   .lema {
     color: white;
-    font-size: 18px;
     height: 450px;
-    margin-right: 167.5px;
+    max-width: 25%;
+    margin-right: 11.3%;
     p {
       margin-bottom: 2.5rem;
+      font-size: 18px;
+      letter-spacing: 2px;
     }
   }
+
   .form {
     display: flex;
     flex-direction: column;
     height: 450px;
+    max-width: 25%;
     width: 294px;
     color: white;
     p {
       margin-bottom: 22px;
+      letter-spacing: 2px;
       &:first-child {
-        margin-bottom: 18px;
+        margin-bottom: 15px;
         font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
       }
     }
     form {
@@ -51,8 +62,8 @@ export const Container = styled.div`
         padding: 20px 0 5px 0;
         &:focus + label .content-name,
         &:valid + label .content-name {
-          transform: translateY(-150%);
-          font-size: 10px;
+          transform: translateY(-100%);
+          font-size: 12px;
           color: rgb(118, 118, 118);
         }
       }
@@ -153,8 +164,8 @@ export const Container = styled.div`
 
         &:focus + label .content-name,
         &:valid + label .content-name {
-          transform: translateY(-720%);
-          font-size: 10px;
+          transform: translateY(-450%);
+          font-size: 12px;
           color: rgb(118, 118, 118);
           margin-bottom: 20px;
         }
@@ -165,6 +176,11 @@ export const Container = styled.div`
         font-size: 20px;
         background-color: white;
         margin-bottom: 33px;
+        cursor: pointer;
+        transition: all 200ms ease;
+        &:hover {
+          background-color: #f0f0f0f0;
+        }
       }
       p {
         font-size: 20px;
@@ -183,6 +199,35 @@ export const Container = styled.div`
         height: 20px;
         width: 20px;
       }
+    }
+  }
+
+  @media (max-width: 800px) {
+    align-items: flex-start;
+    height: 150vh;
+    .backgroundParagraph {
+      font-size: 100px;
+    }
+    .lema {
+      height: fit-content;
+      max-width: 79%;
+      margin-top: 5%;
+      margin-right: 0px;
+      position: absolute;
+      bottom: 0;
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      height: 450px;
+      max-width: 80%;
+      width: 294px;
+      color: white;
+      margin-top: 4.2rem;
     }
   }
 `;

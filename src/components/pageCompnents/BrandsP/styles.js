@@ -12,12 +12,17 @@ export const Container = styled.div`
 
   p {
     display: flex;
-    width: 70%;
+    width: 60%;
     align-self: flex-end;
+    font-size: 14;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   .slideShow {
     height: 300px;
+    margin-top: 40px;
   }
   .slide {
     width: fit-content;
@@ -34,5 +39,19 @@ export const Container = styled.div`
   .machadoImg {
     width: 320px;
     height: 200px;
+  }
+
+  @media (max-width: 800px) {
+    .slide {
+      width: fit-content;
+      height: fit-content;
+      img {
+        width: 150px;
+        height: auto;
+      }
+      p {
+        color: white;
+      }
+    }
   }
 `;

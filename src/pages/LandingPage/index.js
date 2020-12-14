@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Container } from './styles';
 import Main from '../../components/pageCompnents/Main';
@@ -11,6 +11,19 @@ import SocialHeader from '../../components/socialHeader';
 import BrizzaLogo from '../../components/BrizzaLogo';
 
 function LandingPage() {
+  // const [curHeight, setCurHeight] = useState(0);
+
+  useEffect(() => {
+    // setCurHeight(0);
+    // getInfo();
+    console.log('useEffect');
+  }, []);
+
+  // function setScroll() {
+  //   setCurHeight(curHeight + 1);
+  //   console.log(curHeight);
+  // }
+
   return (
     <Container>
       <SocialHeader />
