@@ -10,7 +10,7 @@ function LandingPage() {
     console.log('Passou Aqui');
   }
   return (
-    <Container onMouseOver={onFocusTest}>
+    <Container onMouseOver={onFocusTest} id="page3">
       <p className="backgroundParagraph">
         A matéria prima do design é a cultura
       </p>

@@ -35,7 +35,7 @@ function LandingPage() {
   }
 
   return (
-    <Container onMouseOver={onFocusThis} onMouseOut={onFocusThisOut}>
+    <Container onMouseOver={onFocusThis} onMouseOut={onFocusThisOut} id="page4">
       {changeLogo ? <BrizzaLogoBlack /> : null}
       <p>marcas que trabalhamos</p>
       <Slider

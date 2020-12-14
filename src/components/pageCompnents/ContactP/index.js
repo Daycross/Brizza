@@ -8,7 +8,7 @@ import be from '../../../assets/socialImages/bex2.png';
 
 function LandingPage() {
   return (
-    <Container>
+    <Container id="page5">
       <p className="backgroundParagraph">
         A matéria prima do design é a cultura
       </p>

@@ -6,7 +6,6 @@ export const Container = styled.div`
   display: flex;
   height: 100vh;
   width: 120px;
-  margin-right: 1em;
   justify-content: flex-end;
   z-index: 999;
 
@@ -33,28 +32,37 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
 
+    /* & > .active {
+      & > div {
+        background-color: white;
+      }
+    } */
+
     .line-1 {
       width: 1px;
       border-left: 2px solid white;
       height: 25%;
-      transform: translateX(78px) rotate(8deg);
+      transform: translateX(77px) translateY(1.5px) rotate(8deg);
+      transition: all 300ms ease;
     }
 
     .step-1 {
       position: relative;
       width: 10px;
-      height: 16px;
+      height: 10px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(58px);
       background-color: transparent;
       cursor: pointer;
+      transition: all 300ms ease;
 
       p {
         position: absolute;
         color: white;
         left: -57px;
-        top: -3px;
+        top: -10px;
+        transition: all 300ms ease;
       }
     }
 
@@ -63,23 +71,26 @@ export const Container = styled.div`
       border-left: 2px solid white;
       height: 15%;
       transform: translateX(70px) rotate(-5deg);
+      transition: all 300ms ease;
     }
 
     .step-2 {
       position: relative;
       width: 10px;
-      height: 16px;
+      height: 10px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(68px);
       background-color: transparent;
       cursor: pointer;
+      transition: all 300ms ease;
 
       p {
         position: absolute;
         color: white;
         left: -64px;
-        top: -3px;
+        top: -10px;
+        transition: all 300ms ease;
       }
     }
 
@@ -88,23 +99,26 @@ export const Container = styled.div`
       border-left: 2px solid white;
       height: 15%;
       transform: translateX(68px) rotate(5deg);
+      transition: all 300ms ease;
     }
 
     .step-3 {
       position: relative;
       width: 10px;
-      height: 16px;
+      height: 10px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(58px);
       background-color: transparent;
       cursor: pointer;
+      transition: all 300ms ease;
 
       p {
         position: absolute;
         color: white;
         left: -50px;
-        top: -3px;
+        top: -10px;
+        transition: all 300ms ease;
       }
     }
 
@@ -112,24 +126,27 @@ export const Container = styled.div`
       width: 1px;
       border-left: 2px solid white;
       height: 15%;
-      transform: translateX(70px) rotate(-5deg);
+      transform: translateX(68px) rotate(-5deg);
+      transition: all 300ms ease;
     }
 
     .step-4 {
       position: relative;
       width: 10px;
-      height: 16px;
+      height: 10px;
       border-radius: 50%;
       border: 2px solid white;
       transform: translateX(68px);
       background-color: transparent;
       cursor: pointer;
+      transition: all 300ms ease;
 
       p {
         position: absolute;
         color: white;
         left: -52px;
-        top: -3px;
+        top: -10px;
+        transition: all 300ms ease;
       }
     }
 
@@ -138,6 +155,7 @@ export const Container = styled.div`
       border-left: 2px solid white;
       height: 15%;
       transform: translateX(98px) translateY(-6px) rotate(-27deg);
+      transition: all 300ms ease;
     }
   }
 

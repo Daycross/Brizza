@@ -6,7 +6,7 @@ import gif from '../../../assets/logosImages/gif.png';
 
 function LandingPage() {
   return (
-    <Container>
+    <Container id="page1">
       <div className="main">
         <p>Qual é a sua?</p>
         <img src={gif} alt="Gif Brizza" />

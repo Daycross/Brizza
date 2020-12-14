@@ -26,7 +26,7 @@ function LandingPage() {
   }
 
   return (
-    <Container>
+    <Container id="page2">
       <div className="main">
         <img
           style={{ opacity: opacityLevel }}
