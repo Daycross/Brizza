@@ -202,21 +202,23 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     align-items: flex-start;
-    height: 150vh;
+    height: 130vh;
     .backgroundParagraph {
       font-size: 100px;
     }
     .lema {
       height: fit-content;
       max-width: 79%;
-      margin-top: 5%;
+      margin-top: 3.375rem;
       margin-right: 0px;
       position: absolute;
       bottom: 0;
+      margin-bottom: 3.375rem;
       p {
         margin-bottom: 1rem;
+        font-size: 16px;
       }
     }
 

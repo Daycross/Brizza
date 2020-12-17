@@ -6,11 +6,8 @@ import talks from '../../../assets/talks.jpg';
 function LandingPage() {
   const [useBlur, setUseBlur] = useState(false);
 
-  function onFocusTest() {
-    console.log('Passou Aqui');
-  }
   return (
-    <Container onMouseOver={onFocusTest} id="page3">
+    <Container id="page3">
       <p className="backgroundParagraph">
         A matéria prima do design é a cultura
       </p>

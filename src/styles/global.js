@@ -10,6 +10,12 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Oswald', sans-serif;
       background-color: black;
       font-size: 16px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
 
         textarea:focus, input:focus, select:focus, button:focus {
             box-shadow: 0 0 0 0;

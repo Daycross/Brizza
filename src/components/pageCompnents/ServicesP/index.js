@@ -7,22 +7,14 @@ import talks from '../../../assets/talks.jpg';
 function LandingPage() {
   const [opacityLevel, setOpacityLevel] = useState(0);
 
-  function handleScroll() {
-    console.log(window.scrollY);
-  }
-
   useEffect(() => {
     setOpacityLevel(0);
-    handleScroll();
   }, []);
 
   function handleScrollEvent() {
     if (opacityLevel < 1) {
       setOpacityLevel(opacityLevel + 0.015);
-    } else {
-      return;
     }
-    console.log(opacityLevel);
   }
 
   return (

@@ -16,7 +16,6 @@ function LandingPage() {
   useEffect(() => {
     // setCurHeight(0);
     // getInfo();
-    console.log('useEffect');
   }, []);
 
   // function setScroll() {

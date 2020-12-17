@@ -37,7 +37,7 @@ export const Container = styled.div`
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      max-width: 100%;
+      width: 99vw;
 
       .wrap {
         display: flex;
@@ -47,14 +47,16 @@ export const Container = styled.div`
 
         p {
           color: white;
-          margin-left: 33.4rem;
-          @media (max-width: 1200px) {
+          @media only screen and (max-width: 1200px) {
             margin-left: 20.4rem;
           }
           height: fit-content;
           font-size: 0.9rem;
           &:last-child {
             font-size: ${design};
+          }
+          &:first-child {
+            letter-spacing: 3px;
           }
         }
       }
@@ -71,20 +73,20 @@ export const Container = styled.div`
           margin-left: 5px;
           font-size: ${design};
           height: fit-content;
-          line-height: 102px;
+          line-height: 80px;
           color: white;
           &:first-child {
-            margin-top: 110px;
+            margin-top: 122px;
           }
           &:last-child {
-            margin-bottom: 90px;
+            margin-bottom: 99px;
           }
         }
       }
     }
   }
 
-  @media (max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     .main {
       img {
         position: absolute;
@@ -96,10 +98,11 @@ export const Container = styled.div`
         bottom: 0;
         left: 0;
         right: 0;
-        margin: auto;
+        margin: none;
       }
 
       .whatWeDo {
+        width: 100vw;
         .wrap {
           p {
             margin-left: 1rem;
@@ -112,8 +115,9 @@ export const Container = styled.div`
         .scroll {
           p {
             font-size: ${designMobile};
+            line-height: 47px;
             &:first-child {
-              margin-top: 138px;
+              margin-top: 140px;
             }
             &:last-child {
               margin-bottom: 115px;

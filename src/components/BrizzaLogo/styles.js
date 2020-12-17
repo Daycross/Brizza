@@ -14,6 +14,7 @@ export const Container = styled.div`
   img {
     width: 144px;
     height: 49px;
+    transition: all 300ms ease;
   }
 
   @media (max-width: 800px) {

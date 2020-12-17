@@ -41,7 +41,7 @@ export const Container = styled.div`
         font-weight: 200;
         font-size: 14px;
         font-weight: lighter;
-        letter-spacing: 2px;
+        letter-spacing: 3px;
         text-align: right;
         margin-bottom: 20px;
         text-transform: uppercase;

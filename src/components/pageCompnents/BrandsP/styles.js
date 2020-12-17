@@ -16,7 +16,7 @@ export const Container = styled.div`
     align-self: flex-end;
     font-size: 14;
     font-weight: lighter;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
   }
 

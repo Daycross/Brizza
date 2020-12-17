@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Slider from 'infinite-react-carousel';
 
 import { Container } from './styles';
@@ -13,30 +13,15 @@ import Luandre from '../../../assets/logosImages/luandre.png';
 import MachadoMeyer from '../../../assets/logosImages/machadoMeyer.png';
 import Modeat from '../../../assets/logosImages/modear.png';
 
-import BrizzaLogoBlack from '../../BrizzaLogoBlack';
-
 function LandingPage() {
-  const [changeLogo, setChangeLogo] = useState(false);
-
   function getWindowWidth() {
     const width = window.innerWidth;
     return width;
   }
   const size = getWindowWidth();
 
-  function onFocusThis() {
-    setChangeLogo(true);
-    console.log('in');
-  }
-
-  function onFocusThisOut() {
-    setChangeLogo(false);
-    console.log('in');
-  }
-
   return (
-    <Container onMouseOver={onFocusThis} onMouseOut={onFocusThisOut} id="page4">
-      {changeLogo ? <BrizzaLogoBlack /> : null}
+    <Container id="page4">
       <p>marcas que trabalhamos</p>
       <Slider
         className="slideShow"

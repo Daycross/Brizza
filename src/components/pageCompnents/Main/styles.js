@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const title = '1.87rem';
+const titleMobile = '1.25rem';
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -21,6 +22,8 @@ export const Container = styled.div`
       margin-bottom: 51px;
       font-size: ${title};
       font-weight: lighter;
+      text-transform: uppercase;
+      letter-spacing: 3px;
     }
     img {
       display: block;
@@ -29,10 +32,13 @@ export const Container = styled.div`
       height: 183px;
     }
   }
-  @media (max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     align-items: center;
     .main {
       margin-top: 0px;
+      p {
+        font-size: ${titleMobile};
+      }
       img {
         width: 85%;
       }

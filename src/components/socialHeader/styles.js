@@ -23,6 +23,7 @@ export const Container = styled.div`
       width: 20px;
     }
   }
+
   .progressBar {
     position: absolute;
     bottom: 0;
@@ -159,7 +160,7 @@ export const Container = styled.div`
     }
   }
 
-  @media (max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     margin: 0 20px 0 0;
     width: fit-content;
     .social {
@@ -167,6 +168,50 @@ export const Container = styled.div`
       width: fit-content;
       img {
         margin-bottom: 10px;
+      }
+    }
+
+    .progressBar {
+      display: none;
+    }
+  }
+
+  @media only screen and (min-height: 800px) {
+    .progressBar {
+      .line-1 {
+        transform: translateX(73px) translateY(1.5px) rotate(8deg);
+      }
+
+      .step-1 {
+        transform: translateX(52px);
+      }
+
+      .line-2 {
+        transform: translateX(64px) rotate(-5deg);
+      }
+
+      .step-2 {
+        transform: translateX(64px);
+      }
+
+      .line-3 {
+        transform: translateX(64px) rotate(5deg);
+      }
+
+      .step-3 {
+        transform: translateX(53px);
+      }
+
+      .line-4 {
+        transform: translateX(64px) rotate(-5deg);
+      }
+
+      .step-4 {
+        transform: translateX(64px);
+      }
+
+      .line-5 {
+        transform: translateX(101px) translateY(-8px) rotate(-27deg);
       }
     }
   }

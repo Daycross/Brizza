@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-scroll';
 import { Container } from './styles';
 
 import instagram from '../../assets/socialImages/instagramx2.png';
+import instagramBlack from '../../assets/socialImages/instagramBlack2x.png';
 import linkedin from '../../assets/socialImages/linkedinx2.png';
+import linkedinBlack from '../../assets/socialImages/linkedinBlack2x.png';
 import be from '../../assets/socialImages/bex2.png';
+import beBlack from '../../assets/socialImages/beBlack2x.png';
 
 function SocialHeader() {
   const [line1Style, setLine1Style] = useState('');
@@ -29,8 +32,22 @@ function SocialHeader() {
 
   const [divBorderColor, setDivBorderColor] = useState('');
 
+  const [changeSocialColor, setChangeSocialColor] = useState(false);
+
+  // const [scrolling, setScrolling] = useState(false);
+  const [scrollTop, setScrollTop] = useState(0);
+
+  const windowHeight = window.innerHeight;
+
   function setStyleToDiv(nameStyle) {
     switch (nameStyle) {
+      case 'reset':
+        setBorderWidth1(2);
+
+        setDiv1Background('transparent');
+
+        setChangeSocialColor(false);
+        break;
       case 'line-1':
         setBorderWidth1(4);
         setBorderWidth2(2);
@@ -52,6 +69,8 @@ function SocialHeader() {
         setPColor('white');
 
         setDivBorderColor('white');
+
+        setChangeSocialColor(false);
         break;
       case 'line-2':
         setBorderWidth1(4);
@@ -73,6 +92,8 @@ function SocialHeader() {
         setPColor('white');
 
         setDivBorderColor('white');
+
+        setChangeSocialColor(false);
         break;
       case 'line-3':
         setBorderWidth1(4);
@@ -96,6 +117,8 @@ function SocialHeader() {
 
         setDiv3Background('black');
         setDiv4Background('transparent');
+
+        setChangeSocialColor(true);
         break;
       case 'line-4':
         setBorderWidth1(4);
@@ -118,22 +141,74 @@ function SocialHeader() {
         setPColor('white');
 
         setDivBorderColor('white');
+
+        setChangeSocialColor(false);
         break;
       default:
-        console.log('nada');
+        console.log('Sapucaia');
         break;
     }
   }
+
+  function getWindowPosition(scrollPosition) {
+    if (scrollPosition <= windowHeight * 0.5) {
+      setStyleToDiv('reset');
+    } else if (
+      scrollPosition > windowHeight * 0.5 &&
+      scrollPosition <= windowHeight * 1.5
+    ) {
+      setStyleToDiv('line-1');
+    } else if (
+      scrollPosition > windowHeight * 1.5 &&
+      scrollPosition <= windowHeight * 2.5
+    ) {
+      setStyleToDiv('line-2');
+    } else if (
+      scrollPosition > windowHeight * 2.5 &&
+      scrollPosition <= windowHeight * 3.5
+    ) {
+      setStyleToDiv('line-3');
+    } else {
+      setStyleToDiv('line-4');
+    }
+  }
+
+  useEffect(() => {
+    function onScroll() {
+      const currentPosition = window.pageYOffset;
+      // if (currentPosition > scrollTop) {
+      //   // downscroll code
+      //   setScrolling(false);
+      // } else {
+      //   // upscroll code
+      //   setScrolling(true);
+      // }
+      setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+    }
+    getWindowPosition(scrollTop);
+    window.addEventListener('scroll', onScroll);
+    return window.addEventListener('scroll', onScroll);
+  }, [scrollTop]);
+
   return (
     <Container>
       <div className="social">
-        <img src={instagram} alt="Instagram icon" />
-        <img src={linkedin} alt="Linkedin icon" />
-        <img src={be} alt="Be icon" />
+        <img
+          src={changeSocialColor ? instagramBlack : instagram}
+          alt="Instagram icon"
+        />
+        <img
+          src={changeSocialColor ? linkedinBlack : linkedin}
+          alt="Linkedin icon"
+        />
+        <img src={changeSocialColor ? beBlack : be} alt="Be icon" />
       </div>
       <div className="progressBar">
         <div
-          style={{ borderColor: line1Style, borderWidth: borderWidth1 }}
+          style={{
+            borderColor: line1Style,
+            borderWidth: borderWidth1,
+          }}
           className="line-1"
         />
         <Link
@@ -158,7 +233,10 @@ function SocialHeader() {
         </Link>
         <div
           className="line-2"
-          style={{ borderColor: line2Style, borderWidth: borderWidth2 }}
+          style={{
+            borderColor: line2Style,
+            borderWidth: borderWidth2,
+          }}
         />
         <Link
           onClick={() => setStyleToDiv('line-2')}
