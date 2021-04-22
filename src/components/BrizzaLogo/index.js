@@ -19,6 +19,8 @@ function BrizzaLogo() {
       scrollPosition <= windowHeight * 3.5
     ) {
       setMakeLogoBlack(true);
+    } else if (scrollPosition > windowHeight * 4) {
+      setShowLogo(false);
     } else {
       setShowLogo(true);
       setMakeLogoBlack(false);

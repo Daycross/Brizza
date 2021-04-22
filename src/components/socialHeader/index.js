@@ -32,6 +32,11 @@ function SocialHeader() {
 
   const [divBorderColor, setDivBorderColor] = useState('');
 
+  const [pWeight, setPWeight] = useState('');
+  const [pWeight2, setPWeight2] = useState('');
+  const [pWeight3, setPWeight3] = useState('');
+  const [pWeight4, setPWeight4] = useState('');
+
   const [changeSocialColor, setChangeSocialColor] = useState(false);
 
   // const [scrolling, setScrolling] = useState(false);
@@ -47,6 +52,11 @@ function SocialHeader() {
         setDiv1Background('transparent');
 
         setChangeSocialColor(false);
+
+        setPWeight('normal');
+        setPWeight2('normal');
+        setPWeight3('normal');
+        setPWeight4('normal');
         break;
       case 'line-1':
         setBorderWidth1(4);
@@ -71,6 +81,11 @@ function SocialHeader() {
         setDivBorderColor('white');
 
         setChangeSocialColor(false);
+
+        setPWeight('bold');
+        setPWeight2('normal');
+        setPWeight3('normal');
+        setPWeight4('normal');
         break;
       case 'line-2':
         setBorderWidth1(4);
@@ -94,6 +109,11 @@ function SocialHeader() {
         setDivBorderColor('white');
 
         setChangeSocialColor(false);
+
+        setPWeight('normal');
+        setPWeight2('bold');
+        setPWeight3('normal');
+        setPWeight4('normal');
         break;
       case 'line-3':
         setBorderWidth1(4);
@@ -119,6 +139,11 @@ function SocialHeader() {
         setDiv4Background('transparent');
 
         setChangeSocialColor(true);
+
+        setPWeight('normal');
+        setPWeight2('normal');
+        setPWeight3('bold');
+        setPWeight4('normal');
         break;
       case 'line-4':
         setBorderWidth1(4);
@@ -143,6 +168,11 @@ function SocialHeader() {
         setDivBorderColor('white');
 
         setChangeSocialColor(false);
+
+        setPWeight('normal');
+        setPWeight2('normal');
+        setPWeight3('normal');
+        setPWeight4('bold');
         break;
       default:
         console.log('Sapucaia');
@@ -184,6 +214,13 @@ function SocialHeader() {
       //   setScrolling(true);
       // }
       setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
+
+      // const teste = document.querySelector('.step-1');
+      // if (teste.style.backgroundColor !== 'transparent') {
+      //   teste.children[0].style.fontWeight = 'bold';
+      // } else if (teste.style.backgroundColor === 'bold') {
+      //   teste.children[0].style.fontWeight = 'transparent';
+      // }
     }
     getWindowPosition(scrollTop);
     window.addEventListener('scroll', onScroll);
@@ -193,15 +230,35 @@ function SocialHeader() {
   return (
     <Container>
       <div className="social">
-        <img
-          src={changeSocialColor ? instagramBlack : instagram}
-          alt="Instagram icon"
-        />
-        <img
-          src={changeSocialColor ? linkedinBlack : linkedin}
-          alt="Linkedin icon"
-        />
-        <img src={changeSocialColor ? beBlack : be} alt="Be icon" />
+        <a
+          href="https://www.instagram.com/estudiobrizza/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={changeSocialColor ? instagramBlack : instagram}
+            alt="Instagram icon"
+          />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/company/estudiobrizza"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={changeSocialColor ? linkedinBlack : linkedin}
+            alt="Linkedin icon"
+          />
+        </a>
+
+        <a
+          href="https://www.behance.net/estudiobrizza"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={changeSocialColor ? beBlack : be} alt="Be icon" />
+        </a>
       </div>
       <div className="progressBar">
         <div
@@ -228,7 +285,7 @@ function SocialHeader() {
             type="button"
             className="step-1"
           >
-            <p style={{ color: pColor }}>Serviços</p>
+            <p style={{ color: pColor, fontWeight: pWeight }}>Serviços</p>
           </div>
         </Link>
         <div
@@ -255,7 +312,7 @@ function SocialHeader() {
             type="button"
             className="step-2"
           >
-            <p style={{ color: pColor }}>Trabalhos</p>
+            <p style={{ color: pColor, fontWeight: pWeight2 }}>Trabalhos</p>
           </div>
         </Link>
 
@@ -280,7 +337,7 @@ function SocialHeader() {
             type="button"
             className="step-3"
           >
-            <p style={{ color: pColor }}>Marcas</p>
+            <p style={{ color: pColor, fontWeight: pWeight3 }}>Marcas</p>
           </div>
         </Link>
 
@@ -305,7 +362,7 @@ function SocialHeader() {
             type="button"
             className="step-4"
           >
-            <p style={{ color: pColor }}>Contato</p>
+            <p style={{ color: pColor, fontWeight: pWeight4 }}>Contato</p>
           </div>
         </Link>
 

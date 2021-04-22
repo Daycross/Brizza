@@ -204,7 +204,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 800px) {
     align-items: flex-start;
-    height: 130vh;
+    height: 950px;
     .backgroundParagraph {
       font-size: 100px;
     }

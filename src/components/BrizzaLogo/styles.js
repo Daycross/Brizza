@@ -19,7 +19,7 @@ export const Container = styled.div`
 
   @media (max-width: 800px) {
     align-items: flex-start;
-    margin-left: 20px;
-    margin-top: 10px;
+    margin-left: 25px;
+    margin-top: 50px;
   }
 `;

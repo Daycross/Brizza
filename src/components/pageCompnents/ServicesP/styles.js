@@ -44,6 +44,9 @@ export const Container = styled.div`
         width: fit-content;
         height: fit-content;
         flex-direction: column;
+        /* box-sizing: border-box;
+        align-items: right;
+        text-align: right; */
 
         p {
           color: white;
@@ -54,6 +57,7 @@ export const Container = styled.div`
           font-size: 0.9rem;
           &:last-child {
             font-size: ${design};
+            font-weight: bold;
           }
           &:first-child {
             letter-spacing: 3px;

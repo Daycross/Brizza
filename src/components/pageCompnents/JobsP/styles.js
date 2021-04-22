@@ -52,8 +52,10 @@ export const Container = styled.div`
         border: none;
         background-color: white;
         font-size: 20px;
-        font-weight: lighter;
+        font-weight: normal;
+        font-family: 'Oswald', sans-serif;
         transition: all 200ms ease;
+        border-radius: 2px;
         &:hover {
           background-color: #f0f0f0f0;
         }

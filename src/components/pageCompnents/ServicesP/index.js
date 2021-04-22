@@ -13,7 +13,7 @@ function LandingPage() {
 
   function handleScrollEvent() {
     if (opacityLevel < 1) {
-      setOpacityLevel(opacityLevel + 0.015);
+      setOpacityLevel(opacityLevel + 0.017);
     }
   }
 
@@ -40,6 +40,8 @@ function LandingPage() {
             <p>sistemas</p>
             <p>e-commerce</p>
             <p>identidade visual</p>
+            <p>interativo</p>
+            <p>social</p>
             <p>talks</p>
           </div>
         </div>

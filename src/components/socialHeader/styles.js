@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   position: fixed;
   right: 0;
+  top: 0;
   display: flex;
   height: 100vh;
   width: 120px;
@@ -16,7 +17,7 @@ export const Container = styled.div`
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    margin: 17px 0 52px 0;
+    margin: 50px 0 52px 0;
     z-index: 4;
     img {
       height: 20px;
@@ -61,7 +62,7 @@ export const Container = styled.div`
       p {
         position: absolute;
         color: white;
-        left: -57px;
+        left: -59px;
         top: -10px;
         transition: all 300ms ease;
       }
@@ -89,7 +90,7 @@ export const Container = styled.div`
       p {
         position: absolute;
         color: white;
-        left: -64px;
+        left: -66px;
         top: -10px;
         transition: all 300ms ease;
       }
@@ -117,7 +118,7 @@ export const Container = styled.div`
       p {
         position: absolute;
         color: white;
-        left: -50px;
+        left: -52px;
         top: -10px;
         transition: all 300ms ease;
       }
@@ -145,7 +146,7 @@ export const Container = styled.div`
       p {
         position: absolute;
         color: white;
-        left: -52px;
+        left: -54px;
         top: -10px;
         transition: all 300ms ease;
       }

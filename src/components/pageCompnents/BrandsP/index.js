@@ -32,7 +32,7 @@ function LandingPage() {
         autoplaySpeed={5000}
         adaptiveHeight
         arrows={false}
-        dots
+        dots={false}
       >
         <div className="slide">
           <img src={Avon} alt="Logo da Avon" />

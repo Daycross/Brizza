@@ -18,11 +18,13 @@ export const Container = styled.div`
     font-weight: lighter;
     letter-spacing: 3px;
     text-transform: uppercase;
+    transform: translateY(-140px);
   }
 
   .slideShow {
     height: 300px;
     margin-top: 40px;
+    transform: translateY(-140px);
   }
   .slide {
     width: fit-content;
@@ -41,12 +43,12 @@ export const Container = styled.div`
     height: 200px;
   }
 
-  @media (max-width: 800px) {
+  @media only screen and (max-width: 800px) {
     .slide {
       width: fit-content;
       height: fit-content;
       img {
-        width: 150px;
+        width: 110px;
         height: auto;
       }
       p {

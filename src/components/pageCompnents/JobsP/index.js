@@ -17,7 +17,11 @@ function LandingPage() {
             Nosso
             <br /> Trabalho
           </p>
-          <button type="button" onClick={() => setUseBlur(!useBlur)}>
+          <button
+            className="buttonBlur"
+            type="button"
+            onClick={() => setUseBlur(!useBlur)}
+          >
             quero ver
           </button>
         </div>
