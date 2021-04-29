@@ -11,9 +11,18 @@ function LandingPage() {
     setOpacityLevel(0);
   }, []);
 
-  function handleScrollEvent() {
-    if (opacityLevel < 1) {
-      setOpacityLevel(opacityLevel + 0.017);
+  // function handleScrollEvent() {
+  //   if (opacityLevel < 1) {
+  //     setOpacityLevel(opacityLevel + 0.017);
+  //   }
+  // }
+
+  function scrooled() {
+    const scroll = document.querySelector('.scroll');
+    if (scroll.offsetHeight + (scroll.scrollTop + 5) >= scroll.scrollHeight) {
+      setOpacityLevel(1);
+    } else {
+      setOpacityLevel(0);
     }
   }
 
@@ -31,16 +40,15 @@ function LandingPage() {
             <p>o que fazemos</p>
             <p>design</p>
           </div>
-          <div className="scroll" onScroll={handleScrollEvent}>
-            <p>digital</p>
+          <div className="scroll" onScroll={scrooled}>
+            <p>interativo</p>
             <p>UX</p>
             <p>UI</p>
             <p>sites</p>
             <p>aplicativos</p>
             <p>sistemas</p>
             <p>e-commerce</p>
-            <p>identidade visual</p>
-            <p>interativo</p>
+            <p>branding</p>
             <p>social</p>
             <p>talks</p>
           </div>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const design = '4.375rem';
-const designMobile = '2.5rem';
+const designMobile = '2.1rem';
 
 export const Container = styled.div`
   min-height: 100vh;
@@ -29,6 +29,7 @@ export const Container = styled.div`
       left: 0;
       right: 0;
       margin: auto;
+      transition: opacity 0.3s ease;
       /* transform: translatex(-50%); */
     }
 
@@ -44,12 +45,13 @@ export const Container = styled.div`
         width: fit-content;
         height: fit-content;
         flex-direction: column;
+        margin-right: 40px;
         /* box-sizing: border-box;
         align-items: right;
         text-align: right; */
 
         p {
-          color: white;
+          color: #f2f2f2;
           @media only screen and (max-width: 1200px) {
             margin-left: 20.4rem;
           }
@@ -72,19 +74,19 @@ export const Container = styled.div`
         }
         -ms-overflow-style: none;
         scrollbar-width: none;
-        height: 300px;
+        height: 100vh;
         p {
           margin-left: 5px;
           font-size: ${design};
           height: fit-content;
-          line-height: 80px;
-          color: white;
-          &:first-child {
-            margin-top: 122px;
+          line-height: 120px;
+          color: #f2f2f2;
+          /* &:first-child {
+            margin-top: 45vh;
           }
           &:last-child {
-            margin-bottom: 99px;
-          }
+            margin-bottom: 42.5vh;
+          } */
         }
       }
     }
@@ -108,9 +110,11 @@ export const Container = styled.div`
       .whatWeDo {
         width: 100vw;
         .wrap {
+          margin-right: 20px;
           p {
             margin-left: 1rem;
-            font-size: 1rem;
+            font-size: 0.8rem;
+            letter-spacing: 2px;
             &:last-child {
               font-size: ${designMobile};
             }
@@ -119,7 +123,7 @@ export const Container = styled.div`
         .scroll {
           p {
             font-size: ${designMobile};
-            line-height: 47px;
+            line-height: 55px;
             &:first-child {
               margin-top: 140px;
             }

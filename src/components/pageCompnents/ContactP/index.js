@@ -2,10 +2,6 @@ import React from 'react';
 
 import { Container } from './styles';
 
-import instagram from '../../../assets/socialImages/instagramx2.png';
-import linkedin from '../../../assets/socialImages/linkedinx2.png';
-import be from '../../../assets/socialImages/bex2.png';
-
 function LandingPage() {
   return (
     <Container id="page5">
@@ -14,21 +10,27 @@ function LandingPage() {
       </p>
       <div className="lema">
         <p>
-          Nascemos do desejo de questionar, criar e<br /> evoluir.
-          <br /> Nunca sozinhos. Sempre co-criando.
-        </p>
-        <p>Vivemos de dar significado e propósito</p>
-        <p>
-          Trabalhamos sério, mas com muito bom
-          <br /> humor.
-        </p>
-        <p>
-          Todo dia buscamos conhecimento,
-          <br /> aprendemos novas ferramentas e varamos
+          O que é Brizza? É algo tangível?
           <br />
-          noites trampando.
+          Pode ser descrito ou percebido?
         </p>
-        <p>Nossa brizza é realizar.</p>
+        <p>
+          Brizza, não tem uma forma fixa,
+          <br />
+          não é estavél ou estacionária.
+        </p>
+        <p>É algo único e subjetivo.</p>
+        <p>
+          Cada pessoa tem a sua, e elas tem <br />
+          sua manifestação própria.
+        </p>
+        <p>
+          Nós temos mil formas e <br />
+          significados, democraticamente <br />
+          distribuidos para todos que <br />
+          buscam algo novo.
+        </p>
+        <p>E qual é a nossa Brizza?</p>
       </div>
       <div className="form">
         <p>contato</p>
@@ -55,11 +57,6 @@ function LandingPage() {
           <input type="submit" value="Enviar" />
         </form>
         <p>(11)98219-6464</p>
-        <div className="social">
-          <img src={instagram} alt="Instagram Logo" />
-          <img src={linkedin} alt="Linkedin Logo" />
-          <img src={be} alt="Be Logo" />
-        </div>
       </div>
     </Container>
   );

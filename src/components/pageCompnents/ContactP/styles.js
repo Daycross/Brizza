@@ -9,19 +9,21 @@ export const Container = styled.div`
   scroll-snap-align: start;
 
   .backgroundParagraph {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Trash', sans-serif;
     font-weight: bolder;
-    color: rgba(118, 118, 118, 0.2);
-    font-size: 200px;
+    color: #191919;
+    font-size: 230px;
     position: absolute;
     top: 0;
     height: 712px;
     overflow: hidden;
     z-index: -1;
+    text-transform: lowercase;
+    line-height: 13rem;
   }
 
   .lema {
-    color: white;
+    color: #f2f2f2;
     height: 450px;
     max-width: 25%;
     margin-right: 11.3%;
@@ -29,6 +31,16 @@ export const Container = styled.div`
       margin-bottom: 2.5rem;
       font-size: 18px;
       letter-spacing: 2px;
+      font-family: 'Trash';
+
+      &:nth-child(3) {
+        background: -webkit-linear-gradient(
+          rgba(3, 209, 230, 1),
+          rgba(0, 230, 202, 1)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 
@@ -38,7 +50,7 @@ export const Container = styled.div`
     height: 450px;
     max-width: 25%;
     width: 294px;
-    color: white;
+    color: #f2f2f2;
     p {
       margin-bottom: 22px;
       letter-spacing: 2px;
@@ -56,7 +68,7 @@ export const Container = styled.div`
       .inputStyle {
         border: none;
         background-color: transparent;
-        color: white;
+        color: #f2f2f2;
         width: 100%;
         outline: none;
         padding: 20px 0 5px 0;
@@ -75,6 +87,7 @@ export const Container = styled.div`
 
       .name-div {
         position: relative;
+        margin-bottom: 1rem;
         label {
           position: absolute;
           left: 0%;
@@ -82,7 +95,7 @@ export const Container = styled.div`
           width: 100%;
           height: 100%;
           pointer-events: none;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid #f2f2f2;
           &::after {
             content: '';
             position: absolute;
@@ -99,7 +112,7 @@ export const Container = styled.div`
 
       .email-div {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 1.5rem;
         label {
           position: absolute;
           left: 0%;
@@ -107,7 +120,7 @@ export const Container = styled.div`
           width: 100%;
           height: 100%;
           pointer-events: none;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid #f2f2f2;
           &::after {
             content: '';
             position: absolute;
@@ -132,7 +145,7 @@ export const Container = styled.div`
           width: 100%;
           height: 100%;
           pointer-events: none;
-          border-bottom: 1px solid white;
+          border-bottom: 1px solid #f2f2f2;
           &::after {
             content: '';
             position: absolute;
@@ -157,7 +170,7 @@ export const Container = styled.div`
       textarea {
         border: none;
         background-color: transparent;
-        color: white;
+        color: #f2f2f2;
         resize: none;
         height: 96px;
         width: 100%;
@@ -171,49 +184,50 @@ export const Container = styled.div`
         }
       }
       input:last-child {
-        width: 132px;
-        height: 50px;
+        display: flex;
+        justify-content: center;
+        padding: 10px 25px;
+        border: none;
+        background-color: #f2f2f2;
         font-size: 20px;
-        background-color: white;
-        margin-bottom: 33px;
-        cursor: pointer;
+        font-weight: normal;
+        font-family: 'Trash', sans-serif;
         transition: all 200ms ease;
+        border-radius: 2px;
+        width: 115px;
+        margin-bottom: 1rem;
+        text-transform: lowercase;
+        color: #1e1e1e;
         &:hover {
-          background-color: #f0f0f0f0;
+          background: linear-gradient(
+            90deg,
+            rgba(3, 209, 230, 1) 0%,
+            rgba(0, 230, 202, 1) 100%
+          );
+          cursor: pointer;
         }
       }
       p {
         font-size: 20px;
       }
       label {
-        color: white;
+        color: #f2f2f2;
         font-size: 14px;
-      }
-    }
-
-    .social {
-      display: flex;
-      justify-content: space-between;
-      width: 95px;
-      img {
-        height: 20px;
-        width: 20px;
       }
     }
   }
 
   @media only screen and (max-width: 800px) {
-    align-items: flex-start;
-    height: 950px;
+    flex-direction: column-reverse;
     .backgroundParagraph {
-      font-size: 100px;
+      font-size: 72px;
+      line-height: 13rem;
     }
     .lema {
       height: fit-content;
       max-width: 79%;
       margin-top: 3.375rem;
       margin-right: 0px;
-      position: absolute;
       bottom: 0;
       margin-bottom: 3.375rem;
       p {
@@ -228,8 +242,18 @@ export const Container = styled.div`
       height: 450px;
       max-width: 80%;
       width: 294px;
-      color: white;
+      color: #f2f2f2;
       margin-top: 4.2rem;
+
+      input:last-child {
+        background: linear-gradient(
+          90deg,
+          rgba(3, 209, 230, 1) 0%,
+          rgba(0, 230, 202, 1) 100%
+        );
+        color: #1e1e1e;
+        font-family: 'Trash' !important;
+      }
     }
   }
 `;

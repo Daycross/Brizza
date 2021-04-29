@@ -11,10 +11,18 @@ export const Container = styled.div`
   align-items: center;
   margin-left: 49px;
 
+  .slider {
+    &-track {
+      .slide {
+      }
+    }
+  }
+
   img {
     width: 144px;
     height: 49px;
     transition: all 300ms ease;
+    z-index: 999;
   }
 
   @media (max-width: 800px) {

@@ -37,12 +37,30 @@ function SocialHeader() {
   const [pWeight3, setPWeight3] = useState('');
   const [pWeight4, setPWeight4] = useState('');
 
+  const [pFont, setPFont] = useState('');
+  const [pFont2, setPFont2] = useState('');
+  const [pFont3, setPFont3] = useState('');
+  const [pFont4, setPFont4] = useState('');
+
+  const [leftValue, setLeftValue] = useState();
+  const [leftValue2, setLeftValue2] = useState();
+  const [leftValue3, setLeftValue3] = useState();
+  const [leftValue4, setLeftValue4] = useState();
+
   const [changeSocialColor, setChangeSocialColor] = useState(false);
 
   // const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
 
   const windowHeight = window.innerHeight;
+
+  function alignScroll() {
+    const position = document.querySelector('.wrap p:last-child');
+    const marginFirstChild = document.querySelector('.scroll p:first-child');
+    const marginLastChild = document.querySelector('.scroll p:last-child');
+    marginFirstChild.style.marginTop = `${position.offsetTop}px`;
+    marginLastChild.style.marginBottom = `${position.offsetTop}px`;
+  }
 
   function setStyleToDiv(nameStyle) {
     switch (nameStyle) {
@@ -57,6 +75,16 @@ function SocialHeader() {
         setPWeight2('normal');
         setPWeight3('normal');
         setPWeight4('normal');
+
+        setPFont('');
+        setPFont2('');
+        setPFont3('');
+        setPFont4('');
+
+        setLeftValue(null);
+        setLeftValue2(null);
+        setLeftValue3(null);
+        setLeftValue4(null);
         break;
       case 'line-1':
         setBorderWidth1(4);
@@ -65,20 +93,20 @@ function SocialHeader() {
         setBorderWidth4(2);
         setBorderWidth5(2);
 
-        setLine1Style('white');
-        setLine2Style('white');
-        setLine3Style('white');
-        setLine4Style('white');
-        setLine5Style('white');
+        setLine1Style('#f2f2f2');
+        setLine2Style('#f2f2f2');
+        setLine3Style('#f2f2f2');
+        setLine4Style('#f2f2f2');
+        setLine5Style('#f2f2f2');
 
-        setDiv1Background('white');
+        setDiv1Background('linear-gradient(to right, #03d1e6, #00e6ca)');
         setDiv2Background('transparent');
         setDiv3Background('transparent');
         setDiv4Background('transparent');
 
-        setPColor('white');
+        setPColor('#f2f2f2');
 
-        setDivBorderColor('white');
+        setDivBorderColor('#f2f2f2');
 
         setChangeSocialColor(false);
 
@@ -86,6 +114,16 @@ function SocialHeader() {
         setPWeight2('normal');
         setPWeight3('normal');
         setPWeight4('normal');
+
+        setPFont('Trash');
+        setPFont2('');
+        setPFont3('');
+        setPFont4('');
+
+        setLeftValue(-88);
+        setLeftValue2(null);
+        setLeftValue3(null);
+        setLeftValue4(null);
         break;
       case 'line-2':
         setBorderWidth1(4);
@@ -93,20 +131,20 @@ function SocialHeader() {
         setBorderWidth3(2);
         setBorderWidth4(2);
 
-        setLine1Style('white');
-        setLine2Style('white');
-        setLine3Style('white');
-        setLine4Style('white');
-        setLine5Style('white');
+        setLine1Style('#f2f2f2');
+        setLine2Style('#f2f2f2');
+        setLine3Style('#f2f2f2');
+        setLine4Style('#f2f2f2');
+        setLine5Style('#f2f2f2');
 
-        setDiv1Background('white');
-        setDiv2Background('white');
+        setDiv1Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv2Background('linear-gradient(to right, #03d1e6, #00e6ca)');
         setDiv3Background('transparent');
         setDiv4Background('transparent');
 
-        setPColor('white');
+        setPColor('#f2f2f2');
 
-        setDivBorderColor('white');
+        setDivBorderColor('#f2f2f2');
 
         setChangeSocialColor(false);
 
@@ -114,6 +152,16 @@ function SocialHeader() {
         setPWeight2('bold');
         setPWeight3('normal');
         setPWeight4('normal');
+
+        setPFont('');
+        setPFont2('Trash');
+        setPFont3('');
+        setPFont4('');
+
+        setLeftValue(null);
+        setLeftValue2(-95);
+        setLeftValue3(null);
+        setLeftValue4(null);
         break;
       case 'line-3':
         setBorderWidth1(4);
@@ -122,20 +170,22 @@ function SocialHeader() {
         setBorderWidth4(2);
         setBorderWidth5(2);
         // Trocar pra preto na pagina de marcas
-        setLine1Style('black');
-        setLine2Style('black');
-        setLine3Style('black');
-        setLine4Style('black');
-        setLine5Style('black');
-        setPColor('black');
-        setDiv1Background('black');
-        setDiv2Background('black');
-        setDivBorderColor('black');
+        setLine1Style('#1e1e1e');
+        setLine2Style('#1e1e1e');
+        setLine3Style('#1e1e1e');
+        setLine4Style('#1e1e1e');
+        setLine5Style('#1e1e1e');
+
+        setPColor('#1e1e1e');
+
+        setDiv1Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv2Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDivBorderColor('#1e1e1e');
 
         // Outros estilos normais
-        setLine3Style('black');
+        setLine3Style('#1e1e1e');
 
-        setDiv3Background('black');
+        setDiv3Background('linear-gradient(to right, #03d1e6, #00e6ca)');
         setDiv4Background('transparent');
 
         setChangeSocialColor(true);
@@ -144,6 +194,16 @@ function SocialHeader() {
         setPWeight2('normal');
         setPWeight3('bold');
         setPWeight4('normal');
+
+        setPFont('');
+        setPFont2('');
+        setPFont3('Trash');
+        setPFont4('');
+
+        setLeftValue(null);
+        setLeftValue2(null);
+        setLeftValue3(-80);
+        setLeftValue4(null);
         break;
       case 'line-4':
         setBorderWidth1(4);
@@ -152,20 +212,20 @@ function SocialHeader() {
         setBorderWidth4(4);
         setBorderWidth5(4);
 
-        setLine1Style('white');
-        setLine2Style('white');
-        setLine3Style('white');
-        setLine4Style('white');
-        setLine5Style('white');
+        setLine1Style('#f2f2f2');
+        setLine2Style('#f2f2f2');
+        setLine3Style('#f2f2f2');
+        setLine4Style('#f2f2f2');
+        setLine5Style('#f2f2f2');
 
-        setDiv1Background('white');
-        setDiv2Background('white');
-        setDiv3Background('white');
-        setDiv4Background('white');
+        setDiv1Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv2Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv3Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv4Background('linear-gradient(to right, #03d1e6, #00e6ca)');
 
-        setPColor('white');
+        setPColor('#f2f2f2');
 
-        setDivBorderColor('white');
+        setDivBorderColor('#f2f2f2');
 
         setChangeSocialColor(false);
 
@@ -173,6 +233,16 @@ function SocialHeader() {
         setPWeight2('normal');
         setPWeight3('normal');
         setPWeight4('bold');
+
+        setPFont('');
+        setPFont2('');
+        setPFont3('');
+        setPFont4('Trash');
+
+        setLeftValue(null);
+        setLeftValue2(null);
+        setLeftValue3(null);
+        setLeftValue4(-80);
         break;
       default:
         console.log('Sapucaia');
@@ -204,6 +274,7 @@ function SocialHeader() {
   }
 
   useEffect(() => {
+    alignScroll();
     function onScroll() {
       const currentPosition = window.pageYOffset;
       // if (currentPosition > scrollTop) {
@@ -279,13 +350,22 @@ function SocialHeader() {
         >
           <div
             style={{
-              backgroundColor: div1Background,
+              background: div1Background,
               borderColor: divBorderColor,
             }}
             type="button"
             className="step-1"
           >
-            <p style={{ color: pColor, fontWeight: pWeight }}>Serviços</p>
+            <p
+              style={{
+                color: pColor,
+                fontWeight: pWeight,
+                fontFamily: pFont,
+                left: leftValue,
+              }}
+            >
+              Serviços
+            </p>
           </div>
         </Link>
         <div
@@ -306,13 +386,22 @@ function SocialHeader() {
         >
           <div
             style={{
-              backgroundColor: div2Background,
+              background: div2Background,
               borderColor: divBorderColor,
             }}
             type="button"
             className="step-2"
           >
-            <p style={{ color: pColor, fontWeight: pWeight2 }}>Trabalhos</p>
+            <p
+              style={{
+                color: pColor,
+                fontWeight: pWeight2,
+                fontFamily: pFont2,
+                left: leftValue2,
+              }}
+            >
+              Trabalhos
+            </p>
           </div>
         </Link>
 
@@ -331,13 +420,22 @@ function SocialHeader() {
         >
           <div
             style={{
-              backgroundColor: div3Background,
+              background: div3Background,
               borderColor: divBorderColor,
             }}
             type="button"
             className="step-3"
           >
-            <p style={{ color: pColor, fontWeight: pWeight3 }}>Marcas</p>
+            <p
+              style={{
+                color: pColor,
+                fontWeight: pWeight3,
+                fontFamily: pFont3,
+                left: leftValue3,
+              }}
+            >
+              Marcas
+            </p>
           </div>
         </Link>
 
@@ -356,13 +454,22 @@ function SocialHeader() {
         >
           <div
             style={{
-              backgroundColor: div4Background,
+              background: div4Background,
               borderColor: divBorderColor,
             }}
             type="button"
             className="step-4"
           >
-            <p style={{ color: pColor, fontWeight: pWeight4 }}>Contato</p>
+            <p
+              style={{
+                color: pColor,
+                fontWeight: pWeight4,
+                fontFamily: pFont4,
+                left: leftValue4,
+              }}
+            >
+              Contato
+            </p>
           </div>
         </Link>
 

@@ -18,18 +18,19 @@ export const Container = styled.div`
     height: fit-content;
 
     p {
-      color: white;
+      color: #f2f2f2;
       margin-bottom: 51px;
       font-size: ${title};
       font-weight: lighter;
       text-transform: uppercase;
       letter-spacing: 3px;
+      z-index: 2;
     }
     img {
       display: block;
       max-width: 100%;
       width: 51%;
-      height: 183px;
+      z-index: 2;
     }
   }
   @media only screen and (max-width: 800px) {

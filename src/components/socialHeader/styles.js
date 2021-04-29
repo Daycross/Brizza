@@ -36,13 +36,15 @@ export const Container = styled.div`
 
     /* & > .active {
       & > div {
-        background-color: white;
+        background-color: #f2f2f2;
       }
     } */
-
+    p {
+      transition: all 0.2s ease;
+    }
     .line-1 {
       width: 1px;
-      border-left: 2px solid white;
+      border-left: 2px solid #f2f2f2;
       height: 25%;
       transform: translateX(77px) translateY(1.5px) rotate(8deg);
       transition: all 300ms ease;
@@ -53,7 +55,7 @@ export const Container = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 2px solid #f2f2f2;
       transform: translateX(58px);
       background-color: transparent;
       cursor: pointer;
@@ -61,7 +63,7 @@ export const Container = styled.div`
 
       p {
         position: absolute;
-        color: white;
+        color: #f2f2f2;
         left: -59px;
         top: -10px;
         transition: all 300ms ease;
@@ -70,7 +72,7 @@ export const Container = styled.div`
 
     .line-2 {
       width: 1px;
-      border-left: 2px solid white;
+      border-left: 2px solid #f2f2f2;
       height: 15%;
       transform: translateX(70px) rotate(-5deg);
       transition: all 300ms ease;
@@ -81,7 +83,7 @@ export const Container = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 2px solid #f2f2f2;
       transform: translateX(68px);
       background-color: transparent;
       cursor: pointer;
@@ -89,7 +91,7 @@ export const Container = styled.div`
 
       p {
         position: absolute;
-        color: white;
+        color: #f2f2f2;
         left: -66px;
         top: -10px;
         transition: all 300ms ease;
@@ -98,7 +100,7 @@ export const Container = styled.div`
 
     .line-3 {
       width: 1px;
-      border-left: 2px solid white;
+      border-left: 2px solid #f2f2f2;
       height: 15%;
       transform: translateX(68px) rotate(5deg);
       transition: all 300ms ease;
@@ -109,7 +111,7 @@ export const Container = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 2px solid #f2f2f2;
       transform: translateX(58px);
       background-color: transparent;
       cursor: pointer;
@@ -117,7 +119,7 @@ export const Container = styled.div`
 
       p {
         position: absolute;
-        color: white;
+        color: #f2f2f2;
         left: -52px;
         top: -10px;
         transition: all 300ms ease;
@@ -126,7 +128,7 @@ export const Container = styled.div`
 
     .line-4 {
       width: 1px;
-      border-left: 2px solid white;
+      border-left: 2px solid #f2f2f2;
       height: 15%;
       transform: translateX(68px) rotate(-5deg);
       transition: all 300ms ease;
@@ -137,7 +139,7 @@ export const Container = styled.div`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      border: 2px solid white;
+      border: 2px solid #f2f2f2;
       transform: translateX(68px);
       background-color: transparent;
       cursor: pointer;
@@ -145,7 +147,7 @@ export const Container = styled.div`
 
       p {
         position: absolute;
-        color: white;
+        color: #f2f2f2;
         left: -54px;
         top: -10px;
         transition: all 300ms ease;
@@ -154,7 +156,7 @@ export const Container = styled.div`
 
     .line-5 {
       width: 1px;
-      border-left: 2px solid white;
+      border-left: 2px solid #f2f2f2;
       height: 15%;
       transform: translateX(98px) translateY(-6px) rotate(-27deg);
       transition: all 300ms ease;
@@ -180,39 +182,13 @@ export const Container = styled.div`
   @media only screen and (min-height: 800px) {
     .progressBar {
       .line-1 {
-        transform: translateX(73px) translateY(1.5px) rotate(8deg);
+        transform: translateX(77px) translateY(1.5px) rotate(7deg);
       }
-
-      .step-1 {
-        transform: translateX(52px);
-      }
-
       .line-2 {
-        transform: translateX(64px) rotate(-5deg);
+        transform: translateX(68px) rotate(-5deg);
       }
-
-      .step-2 {
-        transform: translateX(64px);
-      }
-
-      .line-3 {
-        transform: translateX(64px) rotate(5deg);
-      }
-
-      .step-3 {
-        transform: translateX(53px);
-      }
-
-      .line-4 {
-        transform: translateX(64px) rotate(-5deg);
-      }
-
-      .step-4 {
-        transform: translateX(64px);
-      }
-
       .line-5 {
-        transform: translateX(101px) translateY(-8px) rotate(-27deg);
+        transform: translateX(98px) translateY(-7px) rotate(-23deg);
       }
     }
   }

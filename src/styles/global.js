@@ -1,14 +1,25 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Raleway:wght@900&display=swap');
-   body{
+@font-face {
+    font-family: 'Trash';
+    src: url('../assets/fonts/trash-bold.ttf') format('truetype');
+    src: url('../assets/fonts/trash-bold.eot');
+    src: url('../assets/fonts/trash-bold.eot?#iefix') format('embedded-opentype'),
+        url('../assets/fonts/trash-bold.woff2') format('woff2'),
+        url('../assets/fonts/trash-bold.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    /* font-display: swap; */
+}
+
+body{
       margin: 0;
       padding: 0;
       outline: 0;
       box-sizing: border-box;
       font-family: 'Oswald', sans-serif;
-      background-color: black;
+      background-color: #1e1e1e;
       font-size: 16px;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
@@ -34,4 +45,10 @@ export const GlobalStyle = createGlobalStyle`
   button{
       cursor: pointer;
   }
+
+  $color-white: #f2f2f2;
+  $color-black: #1e1e1e;
+  $gadient-value: linear-gradient(90deg, rgba(3,209,230,1) 0%, rgba(0,230,202,1) 100%);
+
+
 `;

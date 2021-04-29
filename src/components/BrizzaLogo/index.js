@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 import { Container } from './styles';
-import logoBrizza from '../../assets/logosImages/brizza2x.png';
-import logoBrizzaBlack from '../../assets/logosImages/brizzaBlack2x.png';
+// import logoBrizza from '../../assets/logosImages/brizza2x.png';
+// import logoBrizzaBlack from '../../assets/logosImages/brizzaBlack2x.png';
+
+import logoBrizza from '../../assets/logosImages/logo-brizza-animado-branco.gif';
+import logoBrizzaBlack from '../../assets/logosImages/logo-brizza-animado-preto.gif';
 
 function BrizzaLogo() {
   const [scrollTop, setScrollTop] = useState(0);

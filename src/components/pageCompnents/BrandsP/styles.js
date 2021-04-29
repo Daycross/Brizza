@@ -3,44 +3,55 @@ import styled from 'styled-components';
 export const Container = styled.div`
   min-height: 100vh;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   scroll-snap-align: start;
-  background-color: white;
+  background-color: #f2f2f2;
   /* overflow: visible;
   overflow-x: hidden; */
 
   p {
     display: flex;
-    width: 60%;
-    align-self: flex-end;
-    font-size: 14;
+    font-size: 14px;
     font-weight: lighter;
     letter-spacing: 3px;
     text-transform: uppercase;
-    transform: translateY(-140px);
+    transform: translateY(120px);
   }
 
-  .slideShow {
-    height: 300px;
-    margin-top: 40px;
-    transform: translateY(-140px);
-  }
-  .slide {
-    width: fit-content;
-    height: fit-content;
-    img {
-      width: 320px;
-      height: auto;
+  @keyframes scroll {
+    0% {
+      transform: translateX(100px);
     }
-    p {
-      color: white;
+    100% {
+      transform: translateX(calc(-380px * 9));
     }
   }
 
-  .machadoImg {
-    width: 320px;
-    height: 200px;
+  .slider {
+    display: flex;
+    width: 100%;
+    background: #f2f2f2;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(150px);
+    &-track {
+      animation: scroll 40s linear infinite;
+      display: flex;
+      width: calc(300px * 9);
+      .slide {
+        display: flex;
+        align-items: center;
+        margin-right: 5rem;
+        width: fit-content;
+        img {
+          height: auto;
+          width: 300px;
+        }
+      }
+    }
   }
 
   @media only screen and (max-width: 800px) {
@@ -52,7 +63,7 @@ export const Container = styled.div`
         height: auto;
       }
       p {
-        color: white;
+        color: #f2f2f2;
       }
     }
   }

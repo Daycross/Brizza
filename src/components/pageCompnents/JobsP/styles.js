@@ -9,26 +9,45 @@ export const Container = styled.div`
   scroll-snap-align: start;
 
   .backgroundParagraph {
-    color: rgba(118, 118, 118, 0.2);
-    font-size: 200px;
+    color: #191919;
+    font-size: 230px;
     position: absolute;
     top: 0;
     height: 712px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Trash', sans-serif;
     font-weight: 900;
     z-index: -1;
+    line-height: 13rem;
   }
 
   .imageButton {
-    width: 50%;
+    width: 50vw;
     position: relative;
+    height: 50vh;
     img {
+      position: absolute;
+      height: 100%;
       width: 100%;
-      -webkit-filter: blur(5px);
-      -moz-filter: blur(5px);
-      -o-filter: blur(5px);
-      -ms-filter: blur(5px);
-      filter: blur(5px);
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+      animation-name: cf4FadeInOut;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-duration: 8s;
+      &:nth-of-type(1) {
+        animation-delay: 6s;
+      }
+      &:nth-of-type(2) {
+        animation-delay: 4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: 2s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: 0s;
+      }
     }
     .wrap {
       position: absolute;
@@ -37,7 +56,7 @@ export const Container = styled.div`
       z-index: 3;
 
       p {
-        color: white;
+        color: #f2f2f2;
         font-weight: 200;
         font-size: 14px;
         font-weight: lighter;
@@ -50,22 +69,46 @@ export const Container = styled.div`
       button {
         padding: 10px 25px;
         border: none;
-        background-color: white;
+        background-color: #f2f2f2;
         font-size: 20px;
         font-weight: normal;
-        font-family: 'Oswald', sans-serif;
-        transition: all 200ms ease;
+        font-family: 'Trash', sans-serif;
+        transition: all 0.3s ease-in-out;
         border-radius: 2px;
+        color: #1e1e1e;
         &:hover {
-          background-color: #f0f0f0f0;
+          background: linear-gradient(
+            90deg,
+            rgba(3, 209, 230, 1) 0%,
+            rgba(0, 230, 202, 1) 100%
+          );
         }
       }
     }
   }
 
+  @keyframes cf4FadeInOut {
+    0% {
+      opacity: 1;
+    }
+    17% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    92% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 800px) {
     .backgroundParagraph {
-      font-size: 100px;
+      font-size: 72px;
+      text-transform: lowercase;
     }
 
     .imageButton {
@@ -73,7 +116,23 @@ export const Container = styled.div`
 
       .wrap {
         left: 35%;
-        bottom: -75px;
+        bottom: -91px;
+
+        p {
+          display: flex;
+          justify-content: center;
+        }
+        a {
+          button {
+            color: #1e1e1e;
+            font-family: 'Trash';
+            background: linear-gradient(
+              90deg,
+              rgba(3, 209, 230, 1) 0%,
+              rgba(0, 230, 202, 1) 100%
+            );
+          }
+        }
       }
     }
   }

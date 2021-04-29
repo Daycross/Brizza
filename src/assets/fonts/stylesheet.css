@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Trash';
+    src: url('Trash-Trash.eot');
+    src: url('Trash-Trash.eot?#iefix') format('embedded-opentype'),
+        url('Trash-Trash.woff2') format('woff2'),
+        url('Trash-Trash.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
