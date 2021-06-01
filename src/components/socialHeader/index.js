@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-scroll';
@@ -53,14 +54,6 @@ function SocialHeader() {
   const [scrollTop, setScrollTop] = useState(0);
 
   const windowHeight = window.innerHeight;
-
-  function alignScroll() {
-    const position = document.querySelector('.wrap p:last-child');
-    const marginFirstChild = document.querySelector('.scroll p:first-child');
-    const marginLastChild = document.querySelector('.scroll p:last-child');
-    marginFirstChild.style.marginTop = `${position.offsetTop}px`;
-    marginLastChild.style.marginBottom = `${position.offsetTop}px`;
-  }
 
   function setStyleToDiv(nameStyle) {
     switch (nameStyle) {
@@ -137,7 +130,7 @@ function SocialHeader() {
         setLine4Style('#f2f2f2');
         setLine5Style('#f2f2f2');
 
-        setDiv1Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv1Background('transparent');
         setDiv2Background('linear-gradient(to right, #03d1e6, #00e6ca)');
         setDiv3Background('transparent');
         setDiv4Background('transparent');
@@ -178,15 +171,15 @@ function SocialHeader() {
 
         setPColor('#1e1e1e');
 
-        setDiv1Background('linear-gradient(to right, #03d1e6, #00e6ca)');
-        setDiv2Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv1Background('transparent');
+        setDiv2Background('transparent');
+        setDiv3Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv4Background('transparent');
+
         setDivBorderColor('#1e1e1e');
 
         // Outros estilos normais
         setLine3Style('#1e1e1e');
-
-        setDiv3Background('linear-gradient(to right, #03d1e6, #00e6ca)');
-        setDiv4Background('transparent');
 
         setChangeSocialColor(true);
 
@@ -218,9 +211,9 @@ function SocialHeader() {
         setLine4Style('#f2f2f2');
         setLine5Style('#f2f2f2');
 
-        setDiv1Background('linear-gradient(to right, #03d1e6, #00e6ca)');
-        setDiv2Background('linear-gradient(to right, #03d1e6, #00e6ca)');
-        setDiv3Background('linear-gradient(to right, #03d1e6, #00e6ca)');
+        setDiv1Background('transparent');
+        setDiv2Background('transparent');
+        setDiv3Background('transparent');
         setDiv4Background('linear-gradient(to right, #03d1e6, #00e6ca)');
 
         setPColor('#f2f2f2');
@@ -274,7 +267,6 @@ function SocialHeader() {
   }
 
   useEffect(() => {
-    alignScroll();
     function onScroll() {
       const currentPosition = window.pageYOffset;
       // if (currentPosition > scrollTop) {
@@ -285,21 +277,25 @@ function SocialHeader() {
       //   setScrolling(true);
       // }
       setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
-
-      // const teste = document.querySelector('.step-1');
-      // if (teste.style.backgroundColor !== 'transparent') {
-      //   teste.children[0].style.fontWeight = 'bold';
-      // } else if (teste.style.backgroundColor === 'bold') {
-      //   teste.children[0].style.fontWeight = 'transparent';
-      // }
     }
     getWindowPosition(scrollTop);
     window.addEventListener('scroll', onScroll);
     return window.addEventListener('scroll', onScroll);
   }, [scrollTop]);
 
+  function menuBurguer() {
+    document.querySelector('.burguer').classList.toggle('active');
+    document.querySelector('.progressBar').classList.toggle('open');
+  }
+
   return (
     <Container>
+      <button type="button" onClick={menuBurguer} className="burguer">
+        <div className="burguer-1" />
+        <div className="burguer-2" />
+        <div className="burguer-3" />
+      </button>
+
       <div className="social">
         <a
           href="https://www.instagram.com/estudiobrizza/"

@@ -27,6 +27,14 @@ body{
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+      overflow-x: hidden!important;
+
+      &.has-no-scroll{
+        overflow-y: hidden;
+      }
+      &.has-scroll{
+        overflow-y: auto !important;
+      }
 
         textarea:focus, input:focus, select:focus, button:focus {
             box-shadow: 0 0 0 0;

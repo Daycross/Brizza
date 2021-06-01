@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable no-console */
+import React, { useState, useEffect, useRef } from 'react';
 
 import { Container } from './styles';
 
@@ -6,24 +7,66 @@ import talks from '../../../assets/talks.jpg';
 
 function LandingPage() {
   const [opacityLevel, setOpacityLevel] = useState(0);
+  const [readMenu, setReadMenu] = useState(0);
+  const refWhatWeDo = useRef(null);
+
+  function alignScroll() {
+    const position = document.querySelector('.wrap p:last-child');
+    const marginFirstChild = document.querySelector('.scroll p:first-child');
+    marginFirstChild.style.marginTop = `${position.offsetTop - 8}px`;
+
+    const marginLastChild = document.querySelector('.scroll p:last-child');
+    marginLastChild.style.marginBottom = `${position.offsetTop - 25}px`;
+  }
+
+  window.addEventListener('resize', alignScroll);
 
   useEffect(() => {
-    setOpacityLevel(0);
+    alignScroll();
   }, []);
 
-  // function handleScrollEvent() {
-  //   if (opacityLevel < 1) {
-  //     setOpacityLevel(opacityLevel + 0.017);
+  // function getPosition(element) {
+  //   let yPosition = 0;
+
+  //   while (element) {
+  //     yPosition += element.offsetTop - element.scrollTop + element.clientTop;
+  //     // eslint-disable-next-line no-param-reassign
+  //     element = element.offsetParent;
   //   }
+
+  //   return { y: yPosition };
   // }
 
-  function scrooled() {
-    const scroll = document.querySelector('.scroll');
-    if (scroll.offsetHeight + (scroll.scrollTop + 5) >= scroll.scrollHeight) {
-      setOpacityLevel(1);
-    } else {
-      setOpacityLevel(0);
+  const blockScroll = () => {
+    // refWhatWeDo?.current?.scrollIntoView({
+    //   behavior: 'smooth',
+    //   block: 'center',
+    //   inline: 'center',
+    // });
+    document.body.classList.add('has-no-scroll');
+  };
+
+  window.addEventListener('scroll', () => {
+    const elemento = document.querySelector('#page2').offsetTop;
+    // const positions = getPosition(elemento);
+    // console.log('scrollY', window.scrollY);
+    // console.log('position', positions.y);
+    console.log(elemento);
+    if (window.scrollY >= elemento && !readMenu) {
+      setReadMenu(1);
+      blockScroll();
     }
+  });
+
+  function scrooled() {
+    alignScroll();
+    const scroll = document.querySelector('.scroll');
+    if (scroll.scrollTop < 1080) return setOpacityLevel(0);
+
+    setOpacityLevel(1);
+    setReadMenu(0);
+    // return refWhatWeDo?.current?.scrollIntoView(false);
+    return document.body.classList.add('has-scroll');
   }
 
   return (
@@ -35,7 +78,7 @@ function LandingPage() {
           src={talks}
           alt="Foto com pessoas reunidas numa plaestra"
         />
-        <div className="whatWeDo">
+        <div ref={refWhatWeDo} className="whatWeDo">
           <div className="wrap">
             <p>o que fazemos</p>
             <p>design</p>

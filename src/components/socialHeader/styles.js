@@ -10,6 +10,10 @@ export const Container = styled.div`
   justify-content: flex-end;
   z-index: 999;
 
+  .burguer {
+    display: none;
+  }
+
   .social {
     position: absolute;
     display: flex;
@@ -33,6 +37,7 @@ export const Container = styled.div`
     right: 0;
     display: flex;
     flex-direction: column;
+    transition: all 0.3s ease;
 
     /* & > .active {
       & > div {
@@ -166,6 +171,40 @@ export const Container = styled.div`
   @media only screen and (max-width: 800px) {
     margin: 0 20px 0 0;
     width: fit-content;
+    .burguer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 30px;
+      width: 30px;
+      background: transparent;
+      border: none;
+      position: absolute;
+      left: 50px;
+      z-index: 100;
+      top: 5px;
+      &-1,
+      &-2,
+      &-3 {
+        width: 100%;
+        height: 2px;
+        background-color: #f2f2f2;
+        transition: all 0.2s ease;
+      }
+    }
+    .active {
+      .burguer-1 {
+        transform: translateY(9px) rotate(45deg);
+      }
+      .burguer-2 {
+        transform: translateX(200px);
+      }
+      .burguer-3 {
+        transform: translateY(-9px) rotate(-45deg);
+      }
+    }
+
     .social {
       flex-direction: column;
       width: fit-content;
@@ -175,11 +214,17 @@ export const Container = styled.div`
     }
 
     .progressBar {
-      display: none;
+      width: 104px;
+      position: initial;
+      transform: translateX(300px);
+    }
+
+    .open {
+      transform: translateX(0px);
     }
   }
 
-  @media only screen and (min-height: 800px) {
+  /* @media only screen and (min-height: 800px) {
     .progressBar {
       .line-1 {
         transform: translateX(77px) translateY(1.5px) rotate(7deg);
@@ -191,5 +236,5 @@ export const Container = styled.div`
         transform: translateX(98px) translateY(-7px) rotate(-23deg);
       }
     }
-  }
+  } */
 `;

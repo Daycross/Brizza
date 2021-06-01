@@ -6,7 +6,9 @@ import talks from '../../../assets/talks.jpg';
 function LandingPage() {
   return (
     <Container id="page3">
-      <p className="backgroundParagraph">A matéria prima do design é a cultura</p>
+      <p className="backgroundParagraph">
+        A matéria prima do design é a cultura
+      </p>
       <div className="imageButton">
         <div className="wrap">
           <p>
