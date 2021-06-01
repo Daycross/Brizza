@@ -180,8 +180,8 @@ export const Container = styled.div`
       width: 30px;
       background: transparent;
       border: none;
-      position: absolute;
-      left: 50px;
+      position: fixed;
+      left: 5px;
       z-index: 100;
       top: 5px;
       &-1,

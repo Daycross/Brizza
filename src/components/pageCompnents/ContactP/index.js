@@ -9,26 +9,13 @@ function LandingPage() {
         A matéria prima do design é a cultura
       </p>
       <div className="lema">
-        <p>
-          O que é Brizza? É algo tangível?
-          <br />
-          Pode ser descrito ou percebido?
-        </p>
-        <p>
-          Brizza, não tem uma forma fixa,
-          <br />
-          não é estavél ou estacionária.
-        </p>
+        <p>O que é Brizza? É algo tangível? Pode ser descrito ou percebido?</p>
+        <p>Brizza, não tem uma forma fixa, não é estavél ou estacionária.</p>
         <p>É algo único e subjetivo.</p>
+        <p>Cada pessoa tem a sua, e elas tem sua manifestação própria.</p>
         <p>
-          Cada pessoa tem a sua, e elas tem <br />
-          sua manifestação própria.
-        </p>
-        <p>
-          Nós temos mil formas e <br />
-          significados, democraticamente <br />
-          distribuidos para todos que <br />
-          buscam algo novo.
+          Nós temos mil formas e significados, democraticamente distribuidos
+          para todos que buscam algo novo.
         </p>
         <p>E qual é a nossa Brizza?</p>
       </div>

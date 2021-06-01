@@ -37,7 +37,7 @@ export const Container = styled.div`
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       width: 99vw;
 
       .wrap {
@@ -46,6 +46,7 @@ export const Container = styled.div`
         height: fit-content;
         flex-direction: column;
         margin-right: 40px;
+        margin-left: 32%;
         /* box-sizing: border-box;
         align-items: right;
         text-align: right; */
@@ -69,18 +70,26 @@ export const Container = styled.div`
 
       .scroll {
         overflow: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 35%;
         &::-webkit-scrollbar {
           display: none;
         }
         -ms-overflow-style: none;
         scrollbar-width: none;
         height: 100vh;
+        .gambeta {
+        }
         p {
           margin-left: 5px;
           font-size: ${design};
           height: fit-content;
           line-height: 120px;
+          text-align: left;
           color: #f2f2f2;
+          display: block;
           /* &:first-child {
             margin-top: 45vh;
           }
@@ -88,6 +97,14 @@ export const Container = styled.div`
             margin-bottom: 42.5vh;
           } */
         }
+      }
+
+      #page-full-scroll {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -111,6 +128,7 @@ export const Container = styled.div`
         width: 100vw;
         .wrap {
           margin-right: 20px;
+          margin-left: 13%;
           p {
             margin-left: 1rem;
             font-size: 0.8rem;
@@ -121,6 +139,7 @@ export const Container = styled.div`
           }
         }
         .scroll {
+          margin-right: 5%;
           p {
             font-size: ${designMobile};
             line-height: 55px;

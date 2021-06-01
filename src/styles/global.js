@@ -28,6 +28,12 @@ body{
       -ms-user-select: none;
       user-select: none;
       overflow-x: hidden!important;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
+      &::-webkit-scrollbar-track {
+        width: 0;
+      }
 
       &.has-no-scroll{
         overflow-y: hidden;

@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React, { useState, useEffect, useRef } from 'react';
-
 import { Container } from './styles';
 
 import talks from '../../../assets/talks.jpg';
@@ -8,21 +7,36 @@ import talks from '../../../assets/talks.jpg';
 function LandingPage() {
   const [opacityLevel, setOpacityLevel] = useState(0);
   const [readMenu, setReadMenu] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const refWhatWeDo = useRef(null);
+
+  const isMobile: boolean = windowWidth <= 768;
 
   function alignScroll() {
     const position = document.querySelector('.wrap p:last-child');
     const marginFirstChild = document.querySelector('.scroll p:first-child');
-    marginFirstChild.style.marginTop = `${position.offsetTop - 8}px`;
+    marginFirstChild.style.marginTop = isMobile
+      ? `${position.offsetTop - 3}px`
+      : `${position.offsetTop - 8}px`;
 
     const marginLastChild = document.querySelector('.scroll p:last-child');
-    marginLastChild.style.marginBottom = `${position.offsetTop - 25}px`;
+    marginLastChild.style.marginBottom = isMobile
+      ? `${position.offsetTop - 23}px`
+      : `${position.offsetTop - 25}px`;
   }
 
   window.addEventListener('resize', alignScroll);
 
+  function handleWindowSizeChange() {
+    setWindowWidth(window.innerWidth);
+  }
+
   useEffect(() => {
     alignScroll();
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    };
   }, []);
 
   // function getPosition(element) {
@@ -38,34 +52,32 @@ function LandingPage() {
   // }
 
   const blockScroll = () => {
-    // refWhatWeDo?.current?.scrollIntoView({
-    //   behavior: 'smooth',
-    //   block: 'center',
-    //   inline: 'center',
-    // });
     document.body.classList.add('has-no-scroll');
   };
 
   window.addEventListener('scroll', () => {
     const elemento = document.querySelector('#page2').offsetTop;
-    // const positions = getPosition(elemento);
-    // console.log('scrollY', window.scrollY);
-    // console.log('position', positions.y);
-    console.log(elemento);
     if (window.scrollY >= elemento && !readMenu) {
       setReadMenu(1);
       blockScroll();
     }
   });
 
+  // function scrollTeste() {
+  //   const elementScroll = document.querySelector('.scroll');
+  //   elementScroll.scrollTop = window.scrollY;
+  // }
+
   function scrooled() {
     alignScroll();
     const scroll = document.querySelector('.scroll');
-    if (scroll.scrollTop < 1080) return setOpacityLevel(0);
+    if (scroll.scrollTop < 1080 && !isMobile) return setOpacityLevel(0);
+    if (scroll.scrollTop < 480 && isMobile) return setOpacityLevel(0);
 
     setOpacityLevel(1);
     setReadMenu(0);
     // return refWhatWeDo?.current?.scrollIntoView(false);
+    // scrollTeste();
     return document.body.classList.add('has-scroll');
   }
 
@@ -78,22 +90,26 @@ function LandingPage() {
           src={talks}
           alt="Foto com pessoas reunidas numa plaestra"
         />
-        <div ref={refWhatWeDo} className="whatWeDo">
+        <div id="trigger" ref={refWhatWeDo} className="whatWeDo">
           <div className="wrap">
             <p>o que fazemos</p>
             <p>design</p>
           </div>
-          <div className="scroll" onScroll={scrooled}>
-            <p>interativo</p>
-            <p>UX</p>
-            <p>UI</p>
-            <p>sites</p>
-            <p>aplicativos</p>
-            <p>sistemas</p>
-            <p>e-commerce</p>
-            <p>branding</p>
-            <p>social</p>
-            <p>talks</p>
+          <div id="page-full-scroll">
+            <div id="#scroll" className="scroll" onScroll={scrooled}>
+              <div className="gambeta">
+                <p>interativo</p>
+                <p>UX</p>
+                <p>UI</p>
+                <p>sites</p>
+                <p>aplicativos</p>
+                <p>sistemas</p>
+                <p>e-commerce</p>
+                <p>branding</p>
+                <p>social</p>
+                <p>talks</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
