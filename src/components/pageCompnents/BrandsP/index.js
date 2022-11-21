@@ -100,6 +100,37 @@ function LandingPage() {
           <div className="slide">
             <img src={Modeat} alt="Logo da Modeat" />
           </div>
+          <div className="slide">
+            <img src={Avon} alt="Logo da Avon" />
+          </div>
+          <div className="slide">
+            <img src={Luandre} alt="Logo da Luandre" />
+          </div>
+          <div className="slide">
+            <img src={Kopenhagen} alt="Logo da Kopenhagen" />
+          </div>
+          <div className="slide">
+            <img src={LaPercussi} alt="Logo da LaPercussi" />
+          </div>
+          <div className="slide">
+            <img src={BrasilCt} alt="Logo da BrasilCt" />
+          </div>
+          <div className="slide">
+            <img src={Goldratt} alt="Logo da Goldratt" />
+          </div>
+          <div className="slide">
+            <img src={Hcentrix} alt="Logo da Hcentrix" />
+          </div>
+          <div className="slide">
+            <img
+              className="machadoImg"
+              src={MachadoMeyer}
+              alt="Logo da Machado Meyer"
+            />
+          </div>
+          <div className="slide">
+            <img src={Modeat} alt="Logo da Modeat" />
+          </div>
         </div>
       </div>
     </Container>

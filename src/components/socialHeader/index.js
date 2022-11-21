@@ -309,7 +309,7 @@ function SocialHeader() {
         </a>
 
         <a
-          href="https://www.linkedin.com/company/estudiobrizza"
+          href="https://br.linkedin.com/company/estudiobrizza"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-console */
 import React, { useState, useEffect, useRef } from 'react';
 import { Container } from './styles';
