@@ -7,14 +7,6 @@ function LandingPage() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  function postForm(ev) {
-    ev.preventDefault();
-    console.log('enviou');
-    console.log(name);
-    console.log(email);
-    console.log(message);
-  }
-
   return (
     <Container id="page5">
       <p className="backgroundParagraph">
@@ -69,7 +61,7 @@ function LandingPage() {
             </label>
           </div>
 
-          <input type="submit" onClick={(ev) => postForm(ev)} value="Enviar" />
+          <input type="submit" value="Enviar" />
         </form>
         <p>(11)98219-6464</p>
       </div>

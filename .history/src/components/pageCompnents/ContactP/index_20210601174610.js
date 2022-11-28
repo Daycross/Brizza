@@ -1,20 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Container } from './styles';
 
 function LandingPage() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  function postForm(ev) {
-    ev.preventDefault();
-    console.log('enviou');
-    console.log(name);
-    console.log(email);
-    console.log(message);
-  }
-
   return (
     <Container id="page5">
       <p className="backgroundParagraph">
@@ -35,41 +23,25 @@ function LandingPage() {
         <p>contato</p>
         <form action="submit">
           <div className="name-div">
-            <input
-              className="inputStyle"
-              onChange={(ev) => setName(ev.target.value)}
-              type="text"
-              id="name"
-              required
-            />
+            <input className="inputStyle" type="text" id="name" required />
             <label htmlFor="name">
               <span className="content-name">Nome</span>
             </label>
           </div>
           <div className="email-div">
-            <input
-              className="inputStyle"
-              onChange={(ev) => setEmail(ev.target.value)}
-              type="text"
-              id="email"
-              required
-            />
+            <input className="inputStyle" type="text" id="email" required />
             <label htmlFor="email">
               <span className="content-name">E-mail</span>
             </label>
           </div>
           <div className="textarea-div">
-            <textarea
-              onChange={(ev) => setMessage(ev.target.value)}
-              id="message"
-              required
-            />
+            <textarea id="message" required />
             <label htmlFor="message">
               <span className="content-name">Mensagem</span>
             </label>
           </div>
 
-          <input type="submit" onClick={(ev) => postForm(ev)} value="Enviar" />
+          <input type="submit" value="Enviar" />
         </form>
         <p>(11)98219-6464</p>
       </div>

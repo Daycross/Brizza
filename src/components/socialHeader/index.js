@@ -12,6 +12,8 @@ import be from '../../assets/socialImages/bex2.png';
 import beBlack from '../../assets/socialImages/beBlack2x.png';
 
 function SocialHeader() {
+  // const [activeStep, setActiveStep] = useState('');
+
   const [line1Style, setLine1Style] = useState('');
   const [line2Style, setLine2Style] = useState('');
   const [line3Style, setLine3Style] = useState('');
