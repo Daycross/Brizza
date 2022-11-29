@@ -26,8 +26,8 @@ export const Container = styled.div`
     height: 50vh;
     img {
       position: absolute;
-      height: 100%;
-      width: 100%;
+      height: auto;
+      width: 80%;
       -webkit-transition: opacity 1s ease-in-out;
       -moz-transition: opacity 1s ease-in-out;
       -o-transition: opacity 1s ease-in-out;
