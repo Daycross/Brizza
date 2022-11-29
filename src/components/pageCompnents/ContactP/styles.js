@@ -217,6 +217,16 @@ export const Container = styled.div`
     }
   }
 
+  .copyright {
+    position: absolute;
+    bottom: 30px;
+
+    p {
+      font-family: 'Trash';
+      color: #f2f2f2;
+    }
+  }
+
   @media only screen and (max-width: 800px) {
     flex-direction: column-reverse;
     .backgroundParagraph {
@@ -229,7 +239,7 @@ export const Container = styled.div`
       margin-top: 3.375rem;
       margin-right: 0px;
       bottom: 0;
-      margin-bottom: 3.375rem;
+      margin-bottom: 6.375rem;
       p {
         margin-bottom: 1rem;
         font-size: 16px;

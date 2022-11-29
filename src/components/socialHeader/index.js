@@ -69,6 +69,8 @@ function SocialHeader() {
 
         setChangeSocialColor(false);
 
+        setDivBorderColor('#f2f2f2');
+
         setPWeight('normal');
         setPWeight2('normal');
         setPWeight3('normal');

@@ -9,10 +9,26 @@ function LandingPage() {
 
   function postForm(ev) {
     ev.preventDefault();
-    console.log('enviou');
-    console.log(name);
-    console.log(email);
-    console.log(message);
+    if (name && email) {
+      // eslint-disable-next-line no-undef
+      fetch('https://api.apispreadsheets.com/data/FsEfShNm99kmYePJ/', {
+        method: 'POST',
+        body: JSON.stringify({
+          data: { Nome: name, 'E-mail': email, Mensagem: message },
+        }),
+      }).then((res) => {
+        if (res.status === 201) {
+          console.log('enviou');
+          setName('');
+          setEmail('');
+          setMessage('');
+          // eslint-disable-next-line no-alert, no-undef
+          alert('Contato enviado com sucesso');
+        } else {
+          console.log('Erro', res);
+        }
+      });
+    }
   }
 
   return (
@@ -38,6 +54,7 @@ function LandingPage() {
             <input
               className="inputStyle"
               onChange={(ev) => setName(ev.target.value)}
+              value={name}
               type="text"
               id="name"
               required
@@ -50,6 +67,7 @@ function LandingPage() {
             <input
               className="inputStyle"
               onChange={(ev) => setEmail(ev.target.value)}
+              value={email}
               type="text"
               id="email"
               required
@@ -61,6 +79,7 @@ function LandingPage() {
           <div className="textarea-div">
             <textarea
               onChange={(ev) => setMessage(ev.target.value)}
+              value={message}
               id="message"
               required
             />
@@ -72,6 +91,9 @@ function LandingPage() {
           <input type="submit" onClick={(ev) => postForm(ev)} value="Enviar" />
         </form>
         <p>(11)98219-6464</p>
+      </div>
+      <div className="copyright">
+        <p>© COPYRIGHT 2022 ESTÚDIO BRIZZA</p>
       </div>
     </Container>
   );

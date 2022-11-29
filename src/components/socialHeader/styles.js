@@ -65,6 +65,7 @@ export const Container = styled.div`
       background-color: transparent;
       cursor: pointer;
       transition: all 300ms ease;
+      z-index: 2;
 
       p {
         position: absolute;
@@ -93,6 +94,7 @@ export const Container = styled.div`
       background-color: transparent;
       cursor: pointer;
       transition: all 300ms ease;
+      z-index: 2;
 
       p {
         position: absolute;
@@ -121,6 +123,7 @@ export const Container = styled.div`
       background-color: transparent;
       cursor: pointer;
       transition: all 300ms ease;
+      z-index: 2;
 
       p {
         position: absolute;
@@ -149,6 +152,7 @@ export const Container = styled.div`
       background-color: transparent;
       cursor: pointer;
       transition: all 300ms ease;
+      z-index: 2;
 
       p {
         position: absolute;
@@ -171,6 +175,7 @@ export const Container = styled.div`
   @media only screen and (max-width: 800px) {
     margin: 0 20px 0 0;
     width: fit-content;
+
     .burguer {
       display: flex;
       flex-direction: column;
@@ -198,7 +203,7 @@ export const Container = styled.div`
         transform: translateY(9px) rotate(45deg);
       }
       .burguer-2 {
-        transform: translateX(200px);
+        transform: translateX(400px);
       }
       .burguer-3 {
         transform: translateY(-9px) rotate(-45deg);
@@ -224,7 +229,7 @@ export const Container = styled.div`
     }
   }
 
-  /* @media only screen and (min-height: 800px) {
+  @media only screen and (min-height: 800px) {
     .progressBar {
       .line-1 {
         transform: translateX(77px) translateY(1.5px) rotate(7deg);
@@ -233,8 +238,8 @@ export const Container = styled.div`
         transform: translateX(68px) rotate(-5deg);
       }
       .line-5 {
-        transform: translateX(98px) translateY(-7px) rotate(-23deg);
+        transform: translateX(98px) translateY(-6px) rotate(-19deg);
       }
     }
-  } */
+  }
 `;

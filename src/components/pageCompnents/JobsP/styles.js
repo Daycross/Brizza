@@ -113,10 +113,12 @@ export const Container = styled.div`
 
     .imageButton {
       width: 100%;
+      display: flex;
+      justify-content: center;
 
       .wrap {
         left: 35%;
-        bottom: -91px;
+        bottom: -40px;
 
         p {
           display: flex;
