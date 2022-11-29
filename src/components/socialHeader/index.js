@@ -32,6 +32,9 @@ function SocialHeader() {
   const [pColor, setPColor] = useState('');
 
   const [divBorderColor, setDivBorderColor] = useState('');
+  const [divBorderColor2, setDivBorderColor2] = useState('');
+  const [divBorderColor3, setDivBorderColor3] = useState('');
+  const [divBorderColor4, setDivBorderColor4] = useState('');
 
   const [pWeight, setPWeight] = useState('');
   const [pWeight2, setPWeight2] = useState('');
@@ -99,7 +102,10 @@ function SocialHeader() {
 
         setPColor('#f2f2f2');
 
-        setDivBorderColor('#f2f2f2');
+        setDivBorderColor('#03d1e6');
+        setDivBorderColor2('#f2f2f2');
+        setDivBorderColor3('#f2f2f2');
+        setDivBorderColor4('#f2f2f2');
 
         setChangeSocialColor(false);
 
@@ -138,6 +144,9 @@ function SocialHeader() {
         setPColor('#f2f2f2');
 
         setDivBorderColor('#f2f2f2');
+        setDivBorderColor2('#03d1e6');
+        setDivBorderColor3('#f2f2f2');
+        setDivBorderColor4('#f2f2f2');
 
         setChangeSocialColor(false);
 
@@ -177,6 +186,9 @@ function SocialHeader() {
         setDiv4Background('transparent');
 
         setDivBorderColor('#1e1e1e');
+        setDivBorderColor2('#1e1e1e');
+        setDivBorderColor3('#03d1e6');
+        setDivBorderColor4('#1e1e1e');
 
         // Outros estilos normais
         setLine3Style('#1e1e1e');
@@ -219,6 +231,9 @@ function SocialHeader() {
         setPColor('#f2f2f2');
 
         setDivBorderColor('#f2f2f2');
+        setDivBorderColor2('#f2f2f2');
+        setDivBorderColor3('#f2f2f2');
+        setDivBorderColor4('#03d1e6');
 
         setChangeSocialColor(false);
 
@@ -383,7 +398,7 @@ function SocialHeader() {
           <div
             style={{
               background: div2Background,
-              borderColor: divBorderColor,
+              borderColor: divBorderColor2,
             }}
             type="button"
             className="step-2"
@@ -417,7 +432,7 @@ function SocialHeader() {
           <div
             style={{
               background: div3Background,
-              borderColor: divBorderColor,
+              borderColor: divBorderColor3,
             }}
             type="button"
             className="step-3"
@@ -451,7 +466,7 @@ function SocialHeader() {
           <div
             style={{
               background: div4Background,
-              borderColor: divBorderColor,
+              borderColor: divBorderColor4,
             }}
             type="button"
             className="step-4"
