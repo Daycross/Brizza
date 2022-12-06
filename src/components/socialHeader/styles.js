@@ -189,6 +189,8 @@ export const Container = styled.div`
       left: 5px;
       z-index: 100;
       top: 5px;
+      padding: 0;
+      margin: 10px 0 0 10px;
       &-1,
       &-2,
       &-3 {
@@ -200,7 +202,7 @@ export const Container = styled.div`
     }
     .active {
       .burguer-1 {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(11px) rotate(45deg);
       }
       .burguer-2 {
         transform: translateX(400px);

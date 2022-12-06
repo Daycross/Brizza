@@ -35,7 +35,7 @@ export const Container = styled.div`
       animation-name: cf4FadeInOut;
       animation-timing-function: ease-in-out;
       animation-iteration-count: infinite;
-      animation-duration: 8s;
+      animation-duration: 6s;
       &:nth-of-type(1) {
         animation-delay: 6s;
       }

@@ -18,14 +18,14 @@ function LandingPage() {
         }),
       }).then((res) => {
         if (res.status === 201) {
-          console.log('enviou');
+          // console.log('enviou');
           setName('');
           setEmail('');
           setMessage('');
           // eslint-disable-next-line no-alert, no-undef
           alert('Contato enviado com sucesso');
         } else {
-          console.log('Erro', res);
+          // console.log('Erro', res);
         }
       });
     }

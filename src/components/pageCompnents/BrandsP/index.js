@@ -3,15 +3,15 @@ import React from 'react';
 
 import { Container } from './styles';
 
-import Avon from '../../../assets/logosImages/avon.png';
-import BrasilCt from '../../../assets/logosImages/brasilct.png';
-import Goldratt from '../../../assets/logosImages/goldratt.png';
-import Hcentrix from '../../../assets/logosImages/hcentrix.png';
-import Kopenhagen from '../../../assets/logosImages/kopenhagen.png';
-import LaPercussi from '../../../assets/logosImages/laPercussi.png';
-import Luandre from '../../../assets/logosImages/luandre.png';
-import MachadoMeyer from '../../../assets/logosImages/machadoMeyer.png';
-import Modeat from '../../../assets/logosImages/modear.png';
+// import Avon from '../../../assets/logosImages/avon.png';
+// import BrasilCt from '../../../assets/logosImages/brasilct.png';
+// import Goldratt from '../../../assets/logosImages/goldratt.png';
+// import Hcentrix from '../../../assets/logosImages/hcentrix.png';
+// import Kopenhagen from '../../../assets/logosImages/kopenhagen.png';
+// import LaPercussi from '../../../assets/logosImages/laPercussi.png';
+// import Luandre from '../../../assets/logosImages/luandre.png';
+// import MachadoMeyer from '../../../assets/logosImages/machadoMeyer.png';
+// import Modeat from '../../../assets/logosImages/modear.png';
 
 function LandingPage() {
   // function getWindowWidth() {
@@ -70,66 +70,114 @@ function LandingPage() {
       <div className="slider">
         <div className="slider-track">
           <div className="slide">
-            <img src={Avon} alt="Logo da Avon" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_01.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Luandre} alt="Logo da Luandre" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_02.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Kopenhagen} alt="Logo da Kopenhagen" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_03.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={LaPercussi} alt="Logo da LaPercussi" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_04.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={BrasilCt} alt="Logo da BrasilCt" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_05.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Goldratt} alt="Logo da Goldratt" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_06.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Hcentrix} alt="Logo da Hcentrix" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_07.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
             <img
               className="machadoImg"
-              src={MachadoMeyer}
-              alt="Logo da Machado Meyer"
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_08.png"
+              alt="Marcas"
             />
           </div>
           <div className="slide">
-            <img src={Modeat} alt="Logo da Modeat" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_09.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Avon} alt="Logo da Avon" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_01.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Luandre} alt="Logo da Luandre" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_02.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Kopenhagen} alt="Logo da Kopenhagen" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_03.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={LaPercussi} alt="Logo da LaPercussi" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_04.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={BrasilCt} alt="Logo da BrasilCt" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_05.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Goldratt} alt="Logo da Goldratt" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_06.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
-            <img src={Hcentrix} alt="Logo da Hcentrix" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_07.png"
+              alt="Marcas"
+            />
           </div>
           <div className="slide">
             <img
               className="machadoImg"
-              src={MachadoMeyer}
-              alt="Logo da Machado Meyer"
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_08.png"
+              alt="Marcas"
             />
           </div>
           <div className="slide">
-            <img src={Modeat} alt="Logo da Modeat" />
+            <img
+              src="https://www.estudiobrizza.com.br/images/clientes/cliente_09.png"
+              alt="Marcas"
+            />
           </div>
         </div>
       </div>

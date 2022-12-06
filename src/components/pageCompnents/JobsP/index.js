@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container } from './styles';
-import talks from '../../../assets/talks.jpg';
+// import talks from '../../../assets/talks.jpg';
 
 function LandingPage() {
   return (
@@ -31,10 +31,18 @@ function LandingPage() {
             </button>
           </a>
         </div>
-        <img src={talks} alt="Apresentação da trabalho da Kopenhagem" />
-        <img src={talks} alt="Apresentação da trabalho da Kopenhagem" />
-        <img src={talks} alt="Apresentação da trabalho da Kopenhagem" />
-        <img src={talks} alt="Apresentação da trabalho da Kopenhagem" />
+        <img
+          src="https://www.estudiobrizza.com.br/images/cases/case_01.jpg"
+          alt="Cases"
+        />
+        <img
+          src="https://www.estudiobrizza.com.br/images/cases/case_02.jpg"
+          alt="Cases"
+        />
+        <img
+          src="https://www.estudiobrizza.com.br/images/cases/case_03.jpg"
+          alt="Cases"
+        />
       </div>
     </Container>
   );

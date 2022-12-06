@@ -103,13 +103,23 @@ export const Container = styled.div`
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 90%;
         height: 100%;
       }
     }
   }
 
+  @media only screen and (max-width: 1410px) {
+    #page-full-scroll {
+      width: 106% !important;
+    }
+  }
+
   @media only screen and (max-width: 800px) {
+    #page-full-scroll {
+      width: 90% !important;
+    }
+
     .main {
       img {
         position: absolute;

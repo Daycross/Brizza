@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Container } from './styles';
 
-import talks from '../../../assets/talks.jpg';
+// import talks from '../../../assets/talks.jpg';
 
 function LandingPage() {
   const [opacityLevel, setOpacityLevel] = useState(0);
@@ -11,7 +11,7 @@ function LandingPage() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const refWhatWeDo = useRef(null);
 
-  const isMobile: boolean = windowWidth <= 768;
+  const isMobile = windowWidth <= 768;
 
   function alignScroll() {
     const position = document.querySelector('.wrap p:last-child');
@@ -88,8 +88,8 @@ function LandingPage() {
         <img
           style={{ opacity: opacityLevel }}
           className="talks"
-          src={talks}
-          alt="Foto com pessoas reunidas numa plaestra"
+          src="https://www.estudiobrizza.com.br/images/institucional_brizza.jpg"
+          alt="Institucional"
         />
         <div id="trigger" ref={refWhatWeDo} className="whatWeDo">
           <div className="wrap">
